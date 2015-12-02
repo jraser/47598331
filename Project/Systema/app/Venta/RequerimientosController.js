@@ -213,7 +213,7 @@
     $scope.ListarDetalle = function () {
         $http({
             method: 'GET',
-            url: 'api/DetalleRequerimientoWS',
+            url: 'api/DetalleRequerimientosWS',
             params: {
                 ID_Requerimientos: $scope.New.ID_Requerimientos,
             }
@@ -391,7 +391,6 @@
             $scope.ListarDetalle();
         });
     } else {                      //Crear
-
     }
 
 
