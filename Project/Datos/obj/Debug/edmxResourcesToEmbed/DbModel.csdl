@@ -613,7 +613,7 @@
       <Parameter Name="ID_Almacen" Mode="In" Type="Int32" />
       <Parameter Name="ID_Sucursal" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="RequerimientoGet">
+    <FunctionImport Name="RequerimientoGet" ReturnType="Collection(SIEPERU2Model.RequerimientoGet_Result)">
       <Parameter Name="ID_Requerimientos" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="RequerimientosCreate" ReturnType="Collection(Int32)">
@@ -1745,6 +1745,27 @@
     <Property Type="String" Name="Lot" Nullable="false" MaxLength="50" />
     <Property Type="Int32" Name="Cantida" Nullable="true" />
     <Property Type="String" Name="Descripcion_Sucursal" Nullable="true" MaxLength="200" />
+  </ComplexType>
+  <ComplexType Name="RequerimientoGet_Result">
+    <Property Type="Int32" Name="ID_Requerimientos" Nullable="false" />
+    <Property Type="Int32" Name="Numero_Req" Nullable="false" />
+    <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="1" />
+    <Property Type="Int32" Name="NroDocumento" Nullable="true" />
+    <Property Type="DateTime" Name="FechaEmision" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaEntrega" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaContabilidad" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="ID_Almacen" Nullable="true" />
+    <Property Type="String" Name="UsuarioCreacion" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="UsuarioModificacion" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="UsuarioEliminacion" Nullable="true" MaxLength="20" />
+    <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaModificacion" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="FechaEliminacion" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Estado" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="Motivo" Nullable="true" MaxLength="100" />
+    <Property Type="Int32" Name="ID_Sucursal" Nullable="true" />
+    <Property Type="String" Name="Descripcion_Sucursal" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="Descripcion_Almacen" Nullable="true" MaxLength="150" />
   </ComplexType>
   <ComplexType Name="RequerimientosList_Result">
     <Property Type="Int32" Name="ID_Requerimientos" Nullable="false" />

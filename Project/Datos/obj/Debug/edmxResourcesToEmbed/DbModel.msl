@@ -1148,7 +1148,31 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="RequerimientoGet" FunctionName="SIEPERU2Model.Store.RequerimientoGet" />
+    <FunctionImportMapping FunctionImportName="RequerimientoGet" FunctionName="SIEPERU2Model.Store.RequerimientoGet">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIEPERU2Model.RequerimientoGet_Result">
+          <ScalarProperty Name="ID_Requerimientos" ColumnName="ID_Requerimientos" />
+          <ScalarProperty Name="Numero_Req" ColumnName="Numero_Req" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="NroDocumento" ColumnName="NroDocumento" />
+          <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+          <ScalarProperty Name="FechaEntrega" ColumnName="FechaEntrega" />
+          <ScalarProperty Name="FechaContabilidad" ColumnName="FechaContabilidad" />
+          <ScalarProperty Name="ID_Almacen" ColumnName="ID_Almacen" />
+          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
+          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
+          <ScalarProperty Name="UsuarioEliminacion" ColumnName="UsuarioEliminacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="FechaEliminacion" ColumnName="FechaEliminacion" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+          <ScalarProperty Name="ID_Sucursal" ColumnName="ID_Sucursal" />
+          <ScalarProperty Name="Descripcion_Sucursal" ColumnName="Descripcion_Sucursal" />
+          <ScalarProperty Name="Descripcion_Almacen" ColumnName="Descripcion_Almacen" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="RequerimientosCreate" FunctionName="SIEPERU2Model.Store.RequerimientosCreate" />
     <FunctionImportMapping FunctionImportName="RequerimientosList" FunctionName="SIEPERU2Model.Store.RequerimientosList">
       <ResultMapping>

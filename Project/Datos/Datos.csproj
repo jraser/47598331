@@ -247,6 +247,9 @@
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequerimientoGet_Result.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="RequerimientosList_Result.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>

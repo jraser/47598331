@@ -11,19 +11,26 @@ namespace Datos
 {
     using System;
     
-    public partial class dll_SucursalList_Result
+    public partial class RequerimientoGet_Result
     {
-        public int ID_Sucursal { get; set; }
-        public string Codigo_Sucursal { get; set; }
-        public string Descripcion_Sucursal { get; set; }
-        public string Estado { get; set; }
+        public int ID_Requerimientos { get; set; }
+        public int Numero_Req { get; set; }
+        public string TipoDocumento { get; set; }
+        public Nullable<int> NroDocumento { get; set; }
+        public Nullable<System.DateTime> FechaEmision { get; set; }
+        public Nullable<System.DateTime> FechaEntrega { get; set; }
+        public Nullable<System.DateTime> FechaContabilidad { get; set; }
+        public Nullable<int> ID_Almacen { get; set; }
         public string UsuarioCreacion { get; set; }
         public string UsuarioModificacion { get; set; }
         public string UsuarioEliminacion { get; set; }
         public Nullable<System.DateTime> FechaCreacion { get; set; }
         public Nullable<System.DateTime> FechaModificacion { get; set; }
         public Nullable<System.DateTime> FechaEliminacion { get; set; }
-        public string Direccion { get; set; }
-        public Nullable<int> ID_Empresa { get; set; }
+        public string Estado { get; set; }
+        public string Motivo { get; set; }
+        public Nullable<int> ID_Sucursal { get; set; }
+        public string Descripcion_Sucursal { get; set; }
+        public string Descripcion_Almacen { get; set; }
     }
 }

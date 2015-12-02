@@ -178,3 +178,15 @@ D:\ProyectoBeta2015\i201120811\Project\Datos\bin\Debug\EntityFramework.SqlServer
 D:\ProyectoBeta2015\i201120811\Project\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
 D:\ProyectoBeta2015\i201120811\Project\Datos\obj\Debug\Datos.dll
 D:\ProyectoBeta2015\i201120811\Project\Datos\obj\Debug\Datos.pdb
+D:\GGWP\47598331\Project\Datos\bin\Debug\Datos.dll.config
+D:\GGWP\47598331\Project\Datos\bin\Debug\Datos.dll
+D:\GGWP\47598331\Project\Datos\bin\Debug\Datos.pdb
+D:\GGWP\47598331\Project\Datos\bin\Debug\Entity.dll
+D:\GGWP\47598331\Project\Datos\bin\Debug\EntityFramework.dll
+D:\GGWP\47598331\Project\Datos\bin\Debug\EntityFramework.SqlServer.dll
+D:\GGWP\47598331\Project\Datos\bin\Debug\Entity.pdb
+D:\GGWP\47598331\Project\Datos\bin\Debug\EntityFramework.xml
+D:\GGWP\47598331\Project\Datos\bin\Debug\EntityFramework.SqlServer.xml
+D:\GGWP\47598331\Project\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+D:\GGWP\47598331\Project\Datos\obj\Debug\Datos.dll
+D:\GGWP\47598331\Project\Datos\obj\Debug\Datos.pdb

@@ -106,16 +106,16 @@
 
 
                                     <div class="page-bar blue-dark ">
-                            
-                                </div>
+
+                                    </div>
 
 
 
-                                <div class="portlet-title ">
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                     
+                                    <div class="portlet-title ">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+
                                             <div class="portlet box">
                                                 <div class="portlet box blue-dark">
                                                     <div class="portlet-title">
@@ -151,7 +151,7 @@
                                                         </p>
 
 
-                                                      
+
 
                                                     </div>
 
@@ -203,7 +203,7 @@
                                                 <button class="btn btn-warning" ng-click="cancel()">Cancelar</button>
                                             </div>
 
-                                          
+
                                         </div>
                                     </div>
                                 </div>
@@ -212,86 +212,86 @@
 
 
 
-                                <div class="portlet-title ">
-                                </div>
-                                <div class="row">
+                            <div class="portlet-title ">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
                                     <div class="col-md-12">
-                                        <div class="col-md-12">
-                                            <div class="portlet box">
-                                                <div class="portlet box blue-dark">
-                                                    <div class="portlet-title">
-                                                        <div class="caption">
-                                                            <i class="fa fa-gift"></i>
-                                                            PRODUCTOS REQUERIDOS
-                                                        </div>
-                                                        <div class="actions">
-                                                        </div>
-
-
-                                                        <div class="tools"><a href="" class="collapse"></a><a href="" class="reload"></a></div>
+                                        <div class="portlet box">
+                                            <div class="portlet box blue-dark">
+                                                <div class="portlet-title">
+                                                    <div class="caption">
+                                                        <i class="fa fa-gift"></i>
+                                                        PRODUCTOS REQUERIDOS
                                                     </div>
-                                                </div>
-
-                                                <div class="">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-striped table-bordered table-hover">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>Código</th>
-                                                                    <th>Descripción </th>
-                                                                    <th>Fecha Vencimiento</th>
-                                                                    <th>Cantidad Actual</th>
-                                                                    <th>Lote</th>
-                                                                    <th>Almacen</th>  
-                                                                    <th>Sucursal</th> 
-                                                                    <th>Cant. Requerida</th>                                       
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr ng-repeat="item in ProductoList"  id="LList">
-                                                                    <td>{{item.Codigo_Producto}}</td>
-                                                                    <td>{{item.Descripcion_Producto}}</td>
-                                                                    <td>{{item.Fecha_venci}}</td>
-                                                                    <td>{{item.Cantida}}</td>
-                                                                    <td>{{item.Lot}}</td>
-                                                                    <td>{{item.ID_Almacen}}</td>
-                                                                    <td>{{item.ID_Sucursal}}</td>
-                                                                    <td><input type="text" class="form-control" ng-model="item.CantidadRequisito" id="Requisito"></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
+                                                    <div class="actions">
                                                     </div>
-                                                </div>
 
+
+                                                    <div class="tools"><a href="" class="collapse"></a><a href="" class="reload"></a></div>
+                                                </div>
                                             </div>
+
+                                            <div class="">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Código</th>
+                                                                <th>Descripción </th>
+                                                                <th>Fecha Vencimiento</th>
+                                                                <th>Cantidad Actual</th>
+                                                                <th>Lote</th>
+                                                                <th>Almacen</th>
+                                                                <th>Sucursal</th>
+                                                                <th>Cant. Requerida</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr ng-repeat="item in ProductoList" id="LList">
+                                                                <td>{{item.Codigo_Producto}}</td>
+                                                                <td>{{item.Descripcion_Producto}}</td>
+                                                                <td>{{item.Fecha_venci}}</td>
+                                                                <td>{{item.Cantida}}</td>
+                                                                <td>{{item.Lot}}</td>
+                                                                <td>{{item.ID_Almacen}}</td>
+                                                                <td>{{item.ID_Sucursal}}</td>
+                                                                <td><input type="text" class="form-control" ng-model="item.CantidadRequisito" id="Requisito"></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
 
 
-                            <div class="form-actions">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            <div class="col-md-offset-3 col-md-9">
-                                                <button type="button" class="btn blue-dark" ng-click="SaveNew()" ng-disabled="!New.Numero_Req || !New.Motivo || !New.FechaEmision || !New.ID_Sucursal ||!New.ID_Almacen || !New.FechaEntrega">Grabar</button>
-                                                <button type="button" class="btn default" ng-click="Cancel()">Cancelar</button> 
-                                            </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-offset-3 col-md-9">
+                                            <button type="button" class="btn blue-dark" ng-click="SaveNew()" ng-disabled="!New.Numero_Req || !New.Motivo || !New.FechaEmision || !New.ID_Sucursal ||!New.ID_Almacen || !New.FechaEntrega">Grabar</button>
+                                            <button type="button" class="btn default" ng-click="Cancel()">Cancelar</button>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                    </div>
+                                </div>
+                                <div class="col-md-6">
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 

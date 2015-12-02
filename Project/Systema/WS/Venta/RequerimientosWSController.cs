@@ -23,12 +23,12 @@ namespace Systema.WS.Venta
             return bl.RequerimientosList(Descripcion_Sucursal, Descripcion_Almacen, FechaInI, FechaFin, Estado);
         }
 
-        //public Requerimientos Get(int ID_Requerimientos)
-        //{
-        //    RequerimientoBL bl = new RequerimientoBL();
-        //    return bl.RequerimientoGet(ID_Requerimientos);
+        public Requerimientos Get(int ID_Requerimientos)
+        {
+            RequerimientoBL bl = new RequerimientoBL();
+            return bl.RequerimientoGet(ID_Requerimientos);
 
-        //}
+        }
 
 
     }

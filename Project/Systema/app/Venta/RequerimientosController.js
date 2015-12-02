@@ -25,14 +25,14 @@
         FechaEntrega: new Date(),
         Lista: [],
         Estado: "",
-        CantidadRequisito:0,
+        CantidadRequisito: 0,
         Lot: "",
         Codigo_Producto: 0,
         Descripcion_Producto: '',
         Fecha_venci: "",
-        Cantida:'',
+        Cantida: '',
     }
-  
+
 
     //$scope.New2 = {
     //    ID_Requerimientos: 0,
@@ -91,8 +91,8 @@
 
     };
 
-  
-//-------------------------------------FILTRO DE BUSQUEDA  DE INICIO------------------------------------------
+
+    //-------------------------------------FILTRO DE BUSQUEDA  DE INICIO------------------------------------------
 
     $scope.List = function () {
         $http({
@@ -136,7 +136,7 @@
 
     $scope.Lok = function () {
         var lista = [];
-        $.each($scope.ProductoXalmacen, function (index,value) {
+        $.each($scope.ProductoXalmacen, function (index, value) {
             if (value.checked == true) {
                 value.checked = false;
                 lista.push(value);
@@ -183,9 +183,9 @@
             $scope.SucursalList = response;
         });
 
-    }    
+    }
 
-        $scope.SelectSuc = function () {
+    $scope.SelectSuc = function () {
         $http({
             method: 'GET',
             url: 'api/AlmacenWS',
@@ -197,17 +197,17 @@
         });
     }
 
-        $scope.RSelectSuc = function () {
-            $http({
-                method: 'GET',
-                url: 'api/AlmacenWS',
-                params: {
-                    ID_Sucursal: $scope.New.ID_Sucursal == (null || 0) ? "%" : $scope.New.ID_Sucursal,
-                }
-            }).success(function (response) {
-                $scope.A1lmacenList2 = response;
-            });
-        }
+    $scope.RSelectSuc = function () {
+        $http({
+            method: 'GET',
+            url: 'api/AlmacenWS',
+            params: {
+                ID_Sucursal: $scope.New.ID_Sucursal == (null || 0) ? "%" : $scope.New.ID_Sucursal,
+            }
+        }).success(function (response) {
+            $scope.A1lmacenList2 = response;
+        });
+    }
 
     //-------------------------------------LISTADO DEL DETALLE DE LOS REQUERIMIENTOS------------------------------------------
     $scope.ListarDetalle = function () {
@@ -218,19 +218,19 @@
                 ID_Requerimientos: $scope.New.ID_Requerimientos,
             }
         }).success(function (response) {
-            $scope.DetalleRequerimientoList = response;      
+            $scope.DetalleRequerimientoList = response;
         });
     }
     //------------------------------------
-    
-  
+
+
     $scope.AList = function () {
         $http({
             method: 'GET',
             url: 'api/AlmacenWS',
             params: {
                 Descripcion_Almacen: '%',
-             
+
             }
         }).success(function (response) {
             $scope.AlmacenList = response;
@@ -268,7 +268,7 @@
                     $http({
                         method: 'POST',
                         url: 'api/DetalleRequerimientosWS',
-                        data: item,       
+                        data: item,
                     }).success(function (response) {
 
                     });
@@ -281,7 +281,7 @@
         });
     }
 
-   
+
 
 
 
@@ -312,7 +312,7 @@
     //            for (var i = 0; i < $scope.DetalleOrdenVentaList.length; i++) {
     //                var item = $scope.DetalleOrdenVentaList[i];
     //                item.ID_Requerimientos = Id;
-                   
+
     //                $http({
     //                    method: 'POST',
     //                    url: 'api/DetalleRequerimientosWS',
@@ -346,7 +346,7 @@
     //                }).success(function (response) {
 
     //                });
-                   
+
     //                $http({
     //                    method: 'Delete',
     //                    url: 'api/OrdenVentaWS',
@@ -381,13 +381,13 @@
             method: 'GET',
             url: 'api/RequerimientosWS',
             params: {
-
                 ID_Requerimientos: $('#Id').val(),
 
             }
         }).success(function (response) {
             $scope.New = response;
             $scope.AList();
+            $scope.RSelectSuc();
             $scope.ListarDetalle();
         });
     } else {                      //Crear
@@ -397,9 +397,9 @@
 
     $scope.Delete = function () {
     }
-    
 
- 
+
+
 
     //$scope.getalmacen = function (item) {
     //    $scope.New.ID_Almacen = item.ID_Almacen;
@@ -424,7 +424,7 @@
     //        var lista = [];
     //        $.each($scope.DetalleOrdenVentaList, function (index, value) {
     //                lista.push(value);
-               
+
     //        });
     //        ffff(lista);
 
@@ -446,7 +446,7 @@
 
     //    $scope.Calcular();
     //}
-   
+
     //$scope.Calcular = function () {
     //    $scope.New.Faltante = 0
 
@@ -458,7 +458,7 @@
     //    });
 
     //}
-    
+
     //function Loadddl() {
     //    $http({
     //        method: 'GET',
@@ -494,7 +494,7 @@
     //    });
 
     //}
-  
+
 
 
 
