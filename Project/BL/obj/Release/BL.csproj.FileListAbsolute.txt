@@ -1,0 +1,91 @@
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\bin\Release\BL.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\bin\Release\BL.pdb
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\bin\Release\Datos.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\bin\Release\Entity.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\bin\Release\EntityFramework.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\bin\Release\Datos.pdb
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\bin\Release\Entity.pdb
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\bin\Release\EntityFramework.xml
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\obj\Release\BL.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\BL\obj\Release\BL.pdb
+C:\Users\User\Desktop\ultimo\Project\BL\bin\Release\BL.dll
+C:\Users\User\Desktop\ultimo\Project\BL\bin\Release\BL.pdb
+C:\Users\User\Desktop\ultimo\Project\BL\bin\Release\Datos.dll
+C:\Users\User\Desktop\ultimo\Project\BL\bin\Release\Entity.dll
+C:\Users\User\Desktop\ultimo\Project\BL\bin\Release\EntityFramework.dll
+C:\Users\User\Desktop\ultimo\Project\BL\bin\Release\Datos.pdb
+C:\Users\User\Desktop\ultimo\Project\BL\bin\Release\Entity.pdb
+C:\Users\User\Desktop\ultimo\Project\BL\bin\Release\EntityFramework.xml
+C:\Users\User\Desktop\ultimo\Project\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\ultimo\Project\BL\obj\Release\BL.dll
+C:\Users\User\Desktop\ultimo\Project\BL\obj\Release\BL.pdb
+D:\Proyecto VW\Net\Project\BL\bin\Release\BL.dll
+D:\Proyecto VW\Net\Project\BL\bin\Release\BL.pdb
+D:\Proyecto VW\Net\Project\BL\bin\Release\Datos.dll
+D:\Proyecto VW\Net\Project\BL\bin\Release\Entity.dll
+D:\Proyecto VW\Net\Project\BL\bin\Release\EntityFramework.dll
+D:\Proyecto VW\Net\Project\BL\bin\Release\Datos.pdb
+D:\Proyecto VW\Net\Project\BL\bin\Release\Entity.pdb
+D:\Proyecto VW\Net\Project\BL\bin\Release\EntityFramework.xml
+D:\Proyecto VW\Net\Project\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+D:\Proyecto VW\Net\Project\BL\obj\Release\BL.dll
+D:\Proyecto VW\Net\Project\BL\obj\Release\BL.pdb
+C:\Users\Royer\Desktop\REV\Project\BL\bin\Release\BL.dll
+C:\Users\Royer\Desktop\REV\Project\BL\bin\Release\BL.pdb
+C:\Users\Royer\Desktop\REV\Project\BL\bin\Release\Datos.dll
+C:\Users\Royer\Desktop\REV\Project\BL\bin\Release\Entity.dll
+C:\Users\Royer\Desktop\REV\Project\BL\bin\Release\EntityFramework.dll
+C:\Users\Royer\Desktop\REV\Project\BL\bin\Release\Datos.pdb
+C:\Users\Royer\Desktop\REV\Project\BL\bin\Release\Entity.pdb
+C:\Users\Royer\Desktop\REV\Project\BL\bin\Release\EntityFramework.xml
+C:\Users\Royer\Desktop\REV\Project\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+C:\Users\Royer\Desktop\REV\Project\BL\obj\Release\BL.dll
+C:\Users\Royer\Desktop\REV\Project\BL\obj\Release\BL.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\bin\Release\BL.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\bin\Release\BL.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\bin\Release\Datos.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\bin\Release\Entity.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\bin\Release\EntityFramework.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\bin\Release\Datos.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\bin\Release\Entity.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\bin\Release\EntityFramework.xml
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\obj\Release\BL.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\BL\obj\Release\BL.pdb
+D:\ROYECTO BETA\i201120811\Project\BL\bin\Release\BL.dll
+D:\ROYECTO BETA\i201120811\Project\BL\bin\Release\BL.pdb
+D:\ROYECTO BETA\i201120811\Project\BL\bin\Release\Datos.dll
+D:\ROYECTO BETA\i201120811\Project\BL\bin\Release\Entity.dll
+D:\ROYECTO BETA\i201120811\Project\BL\bin\Release\EntityFramework.dll
+D:\ROYECTO BETA\i201120811\Project\BL\bin\Release\Datos.pdb
+D:\ROYECTO BETA\i201120811\Project\BL\bin\Release\Entity.pdb
+D:\ROYECTO BETA\i201120811\Project\BL\bin\Release\EntityFramework.xml
+D:\ROYECTO BETA\i201120811\Project\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+D:\ROYECTO BETA\i201120811\Project\BL\obj\Release\BL.dll
+D:\ROYECTO BETA\i201120811\Project\BL\obj\Release\BL.pdb
+<<<<<<< HEAD
+D:\ProyectoBeta2015\i201120811\Project\BL\bin\Release\BL.dll
+D:\ProyectoBeta2015\i201120811\Project\BL\bin\Release\BL.pdb
+D:\ProyectoBeta2015\i201120811\Project\BL\bin\Release\Datos.dll
+D:\ProyectoBeta2015\i201120811\Project\BL\bin\Release\Entity.dll
+D:\ProyectoBeta2015\i201120811\Project\BL\bin\Release\EntityFramework.dll
+D:\ProyectoBeta2015\i201120811\Project\BL\bin\Release\Datos.pdb
+D:\ProyectoBeta2015\i201120811\Project\BL\bin\Release\Entity.pdb
+D:\ProyectoBeta2015\i201120811\Project\BL\bin\Release\EntityFramework.xml
+D:\ProyectoBeta2015\i201120811\Project\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+D:\ProyectoBeta2015\i201120811\Project\BL\obj\Release\BL.dll
+D:\ProyectoBeta2015\i201120811\Project\BL\obj\Release\BL.pdb
+=======
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\bin\Release\BL.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\bin\Release\BL.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\bin\Release\Datos.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\bin\Release\Entity.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\bin\Release\EntityFramework.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\bin\Release\Datos.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\bin\Release\Entity.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\bin\Release\EntityFramework.xml
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\obj\Release\BL.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\obj\Release\BL.pdb
+>>>>>>> origin/master

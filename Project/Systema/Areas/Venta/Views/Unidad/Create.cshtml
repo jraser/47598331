@@ -1,0 +1,87 @@
+﻿
+<div>
+    <div class="portlet box blue-dark ">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift"></i>
+                UNIDAD DE MEDIDA
+            </div>
+            <div class="tools"><a href="" class="collapse"></a><a href="" class="reload"></a></div>
+        </div>
+        <div class="portlet-body form">
+            <form class="form-horizontal" role="form" id="FormMovbco" name="FormGrupo">
+                <div class="form-body">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Unidad Base </label>
+                        <div class="col-md-3">
+                            <select ng-model="New.Codigo_UMedida" class="form-control"
+                                    data-ng-options="a.Codigo_UMedida as a.Nombre for a in dll_UnidadList" id="New.Codigo_UMedida"></select>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Cantidad Base  </label>
+                        <div class="col-md-6">
+                            <input type="text" ng-required="true" onkeypress="return soloNumeros(event)" placeholder="Ingrese Cantidad" id="New.CantidaBase" class="form-control input-inline input-medium"
+                                   ng-model="New.CantidaBase">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Unidad Presentación </label>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-inline input-medium"
+                                   ng-model="New.UnidadPresentacion" id="New.UnidadPresentacion" placeholder="Ingresar U.Presentacion" oninput="validacion('Nombre')">
+
+                        </div>
+                    </div>
+                 
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Cantidad Presentacion  </label>
+                        <div class="col-md-6">
+                            <input type="text" ng-required="true" onkeypress="return soloNumeros(event)" placeholder="Ingrese Cantidad" id="New.Cantidad" class="form-control input-inline input-medium"
+                                   ng-model="New.Cantidad">
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Observación  </label>
+                        <div class="col-md-6">
+                            <input type="text" ng-required="true" oninput="validacion('New.Observacion')" placeholder="Ingrese Observacion" id="New.Observacion" class="form-control input-inline input-medium"
+                                   ng-model="New.Observacion">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-9">
+                            <button type="button" class="btn blue-dark" onclick="this.disabled=true" ng-click="SaveNew()" ng-disabled="!New.Codigo_UMedida || !New.UnidadPresentacion || !New.CantidaBase || !New.Cantidad">Grabar</button>
+                            <button type="button" class="btn default" ng-click="Cancel()">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    // Solo permite ingresar numeros.
+    function soloNumeros(e) {
+        var key = window.Event ? e.which : e.keyCode
+        return ((key >= 48 && key <= 57) || (key == 46))
+    }
+</script>
+
+
+
+
+
+
+
+

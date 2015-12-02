@@ -1,0 +1,297 @@
+﻿<div>
+    <div class="tab-pane" id="tab_2">
+        <div class="portlet light bg-inverse">
+            <div class="portlet box blue-dark ">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="fa fa-file"></i>
+                        REQUERIMIENTOS
+                    </div>
+                    <div class="tools"><a href="" class="collapse"></a><a href="" class="reload"></a></div>
+                </div>
+                <div class="portlet-body form">
+                    <div class="form-body">
+                        <div class="row">
+                            <div class="">
+                                <div class="col-md-12">
+
+
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4">N° Requerimiento</label>
+                                                <div class="col-md-8">
+                                                    <div>
+                                                        <p class="input-group">
+                                                            <input type="text" id="New.Numero_Req" class="form-control" ng-model="New.Numero_Req">
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-4">Motivo</label>
+                                                <div class="col-md-8">
+                                                    <div>
+                                                        <p class="input-group">
+                                                            <input type="text" id="New.Motivo" class="form-control" ng-model="New.Motivo">
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-4 control-label">Fecha de Emisión</label>
+                                                <div class="col-md-8">
+                                                    <input type="text" id="" class="form-control input-inline input-medium" datepicker-popup="dd/MM/yyyy"
+                                                           ng-model="New.FechaEmision" value="{{New.Fchope | date:'dd/MM/yyyy'}}"
+                                                           is-open="opened" min-date="minDate" max-date="'2019-06-22'" datepicker-options="dateOptions"
+                                                           ng-required="true" close-text="Close" disabled ng-change="DescuentoListar()" />
+                                                    <span class=""><button type="button" class="btn btn-default" ng-click="open($event)" ng-disabled="disabled"><i class="glyphicon glyphicon-calendar"></i></button></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Sucursal</label>
+                                                <div class="col-md-9">
+                                                    <div>
+                                                        <p class="input-group">
+                                                            <select ng-model="New.ID_Sucursal" id="New.ID_Sucursal" class="form-control" ng-change="RSelectSuc()"
+                                                                    data-ng-options="b.ID_Sucursal as b.Descripcion_Sucursal for b in SucursalList"></select>
+
+                                                        </p>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label col-md-3">Almacen</label>
+                                                <div class="col-md-9">
+                                                    <div>
+                                                        <p class="input-group">
+                                                            <select ng-model="New.ID_Almacen" class="form-control" id="New.ID_Almacen"
+                                                                    data-ng-options="b.ID_Almacen as b.Descripcion_Almacen for b in A1lmacenList2"></select>
+
+                                                        </p>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label">Fecha de Entrega</label>
+                                                <div class="col-md-9">
+                                                    <input type="text" id="New.FechaEntrega" class="form-control input-inline input-medium" datepicker-popup="dd/MM/yyyy"
+                                                           ng-model="New.FechaEntrega" value="{{New.Fchope | date:'dd/MM/yyyy'}}"
+                                                           is-open="opened2" min-date="minDate" max-date="'2019-06-22'" datepicker-options="dateOptions"
+                                                           ng-required="true" close-text="Close" disabled ng-change="DescuentoListar()" />
+                                                    <span class=""><button type="button" class="btn btn-default" ng-click="open2($event)" ng-disabled="disabled"><i class="glyphicon glyphicon-calendar"></i></button></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="row">
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="page-bar blue-dark ">
+                            
+                                </div>
+
+
+
+                                <div class="portlet-title ">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                     
+                                            <div class="portlet box">
+                                                <div class="portlet box blue-dark">
+                                                    <div class="portlet-title">
+                                                        <div class="caption">
+                                                            <i class="fa fa-gift"></i>
+                                                            BUSQUEDA DE PRODUCTOS POR ALMACEN
+                                                        </div>
+                                                        <div class="actions">
+                                                        </div>
+
+
+                                                        <div class="tools"><a href="" class="collapse"></a><a href="" class="reload"></a></div>
+                                                    </div>
+                                                </div>
+
+                                                <form role="form" class="form-inline" name="FormSocioNegocioList">
+                                                    <div class="col-md-11">
+                                                        <label class="control-label">Sucursal</label>
+                                                        <p class="input-group">
+                                                            <select ng-model="Xparameters.ID_Sucursal" class="form-control" ng-change="SelectSuc()" ng-click="PList()"
+                                                                    data-ng-options="a.ID_Sucursal as a.Descripcion_Sucursal for a in SucursalList"></select>
+                                                        </p>
+                                                        <label class="control-label">Almacen</label>
+                                                        <p class="input-group">
+                                                            <select ng-model="Xparameters.ID_Almacen" class="form-control" ng-click="PList()"
+                                                                    data-ng-options="a.ID_Almacen as a.Descripcion_Almacen for a in A2lmacenList2"></select>
+                                                        </p>
+
+                                                        <label class="control-label">Producto</label>
+                                                        <p class="input-group">
+                                                            <input type="text" class="form-control input-medium" placeholder="" ng-click="PList()"
+                                                                   ng-model="parameters.Descripcion_Producto">
+                                                        </p>
+
+
+                                                      
+
+                                                    </div>
+
+                                                    <p class="form-group">
+                                                        <button type="submit" class="btn blue-dark" ng-click="PList()">Buscar</button>
+                                                    </p>
+
+                                                </form>
+
+
+                                            </div>
+
+                                            <div>
+                                                <div class="row">
+                                                </div>
+                                            </div>
+                                            <table class="table table-striped table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Código</th>
+                                                        <th>Descripción </th>
+                                                        <th>Fecha Vencimiento</th>
+                                                        <th>Cantidad</th>
+                                                        <th>Lote</th>
+                                                        <th>Almacen</th>
+                                                        <th>Sucursal</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr ng-repeat="item in ProductoXalmacen">
+                                                        <td>{{item.Codigo_Producto}}</td>
+                                                        <td>{{item.Descripcion_Producto}}</td>
+                                                        <td>{{item.Fecha_venci}}</td>
+                                                        <td>{{item.Cantida}}</td>
+                                                        <td>{{item.Lot}}</td>
+                                                        <td>{{item.ID_Almacen}}</td>
+                                                        <td>{{item.ID_Sucursal}}</td>
+                                                        <td align="center">
+                                                            <input type="checkbox"
+                                                                   ng-model="item.checked">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <div class="modal-footer">
+                                                <button class="btn btn-primary" ng-click="Lok()">Aceptar</button>
+                                                <button class="btn btn-warning" ng-click="cancel()">Cancelar</button>
+                                            </div>
+
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                                <div class="portlet-title ">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-12">
+                                            <div class="portlet box">
+                                                <div class="portlet box blue-dark">
+                                                    <div class="portlet-title">
+                                                        <div class="caption">
+                                                            <i class="fa fa-gift"></i>
+                                                            PRODUCTOS REQUERIDOS
+                                                        </div>
+                                                        <div class="actions">
+                                                        </div>
+
+
+                                                        <div class="tools"><a href="" class="collapse"></a><a href="" class="reload"></a></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-striped table-bordered table-hover">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Código</th>
+                                                                    <th>Descripción </th>
+                                                                    <th>Fecha Vencimiento</th>
+                                                                    <th>Cantidad Actual</th>
+                                                                    <th>Lote</th>
+                                                                    <th>Almacen</th>  
+                                                                    <th>Sucursal</th> 
+                                                                    <th>Cant. Requerida</th>                                       
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr ng-repeat="item in ProductoList"  id="LList">
+                                                                    <td>{{item.Codigo_Producto}}</td>
+                                                                    <td>{{item.Descripcion_Producto}}</td>
+                                                                    <td>{{item.Fecha_venci}}</td>
+                                                                    <td>{{item.Cantida}}</td>
+                                                                    <td>{{item.Lot}}</td>
+                                                                    <td>{{item.ID_Almacen}}</td>
+                                                                    <td>{{item.ID_Sucursal}}</td>
+                                                                    <td><input type="text" class="form-control" ng-model="item.CantidadRequisito" id="Requisito"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-actions">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <div class="col-md-offset-3 col-md-9">
+                                                <button type="button" class="btn blue-dark" ng-click="SaveNew()" ng-disabled="!New.Numero_Req || !New.Motivo || !New.FechaEmision || !New.ID_Sucursal ||!New.ID_Almacen || !New.FechaEntrega">Grabar</button>
+                                                <button type="button" class="btn default" ng-click="Cancel()">Cancelar</button> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

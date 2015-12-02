@@ -1,0 +1,32 @@
+USE [SIEPERU2]
+GO
+/****** Object:  StoredProcedure [dbo].[PrecioList]    Script Date: 15/11/2015 23:58:21 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[PrecioList](
+@ID_Producto INT 
+)
+AS
+BEGIN
+SELECT P.ID_Precio
+      ,P.ID_Producto
+      ,P.PV
+      ,P.PC
+	  ,P.ID_Socio
+	  ,Nombres_Socio
+      ,P.UsuarioCreacion
+      ,P.UsuarioModificacion
+      ,P.UsuarioEliminacion
+      ,P.FechaCreacion
+      ,P.FechaModificacion
+      ,P.FechaEliminacion
+	  ,p.Fecha_vigen
+  FROM Tbl_Precio P INNER JOIN Tbl_SocioNegocio S
+  ON P.ID_Socio=S.ID_Socio
+  WHERE ID_Producto=@ID_Producto
+  and Tipo='Proveedor'
+
+END
+

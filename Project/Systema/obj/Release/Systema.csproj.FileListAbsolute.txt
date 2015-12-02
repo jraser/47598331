@@ -1,0 +1,99 @@
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\bin\Systema.dll.config
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\bin\Systema.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\bin\Systema.pdb
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\bin\BL.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\bin\Entity.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\bin\Datos.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\bin\BL.pdb
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\bin\Entity.pdb
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\bin\Datos.pdb
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\obj\Release\Systema.csprojResolveAssemblyReference.cache
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\obj\Release\Systema.dll
+C:\Users\Administrador.VIWEB03\Desktop\Project\Systema\obj\Release\Systema.pdb
+C:\Users\User\Desktop\ultimo\Project\Systema\bin\Systema.dll.config
+C:\Users\User\Desktop\ultimo\Project\Systema\bin\Systema.dll
+C:\Users\User\Desktop\ultimo\Project\Systema\bin\Systema.pdb
+C:\Users\User\Desktop\ultimo\Project\Systema\bin\BL.dll
+C:\Users\User\Desktop\ultimo\Project\Systema\bin\Entity.dll
+C:\Users\User\Desktop\ultimo\Project\Systema\bin\Datos.dll
+C:\Users\User\Desktop\ultimo\Project\Systema\bin\BL.pdb
+C:\Users\User\Desktop\ultimo\Project\Systema\bin\Entity.pdb
+C:\Users\User\Desktop\ultimo\Project\Systema\bin\Datos.pdb
+C:\Users\User\Desktop\ultimo\Project\Systema\obj\Release\Systema.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\ultimo\Project\Systema\obj\Release\Systema.dll
+C:\Users\User\Desktop\ultimo\Project\Systema\obj\Release\Systema.pdb
+D:\Proyecto VW\Net\Project\Systema\bin\Systema.dll.config
+D:\Proyecto VW\Net\Project\Systema\bin\Systema.dll
+D:\Proyecto VW\Net\Project\Systema\bin\Systema.pdb
+D:\Proyecto VW\Net\Project\Systema\bin\BL.dll
+D:\Proyecto VW\Net\Project\Systema\bin\Entity.dll
+D:\Proyecto VW\Net\Project\Systema\bin\Datos.dll
+D:\Proyecto VW\Net\Project\Systema\bin\BL.pdb
+D:\Proyecto VW\Net\Project\Systema\bin\Entity.pdb
+D:\Proyecto VW\Net\Project\Systema\bin\Datos.pdb
+D:\Proyecto VW\Net\Project\Systema\obj\Release\Systema.csprojResolveAssemblyReference.cache
+D:\Proyecto VW\Net\Project\Systema\obj\Release\Systema.dll
+D:\Proyecto VW\Net\Project\Systema\obj\Release\Systema.pdb
+C:\Users\Royer\Desktop\REV\Project\Systema\bin\Systema.dll.config
+C:\Users\Royer\Desktop\REV\Project\Systema\bin\Systema.dll
+C:\Users\Royer\Desktop\REV\Project\Systema\bin\Systema.pdb
+C:\Users\Royer\Desktop\REV\Project\Systema\bin\BL.dll
+C:\Users\Royer\Desktop\REV\Project\Systema\bin\Entity.dll
+C:\Users\Royer\Desktop\REV\Project\Systema\bin\Datos.dll
+C:\Users\Royer\Desktop\REV\Project\Systema\bin\BL.pdb
+C:\Users\Royer\Desktop\REV\Project\Systema\bin\Entity.pdb
+C:\Users\Royer\Desktop\REV\Project\Systema\bin\Datos.pdb
+C:\Users\Royer\Desktop\REV\Project\Systema\obj\Release\Systema.csprojResolveAssemblyReference.cache
+C:\Users\Royer\Desktop\REV\Project\Systema\obj\Release\Systema.dll
+C:\Users\Royer\Desktop\REV\Project\Systema\obj\Release\Systema.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\bin\Systema.dll.config
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\bin\Systema.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\bin\Systema.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\bin\BL.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\bin\Entity.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\bin\Datos.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\bin\BL.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\bin\Entity.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\bin\Datos.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\obj\Release\Systema.csprojResolveAssemblyReference.cache
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\obj\Release\Systema.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\BETAPHARMA\Project\Systema\obj\Release\Systema.pdb
+D:\ROYECTO BETA\i201120811\Project\Systema\bin\Systema.dll.config
+D:\ROYECTO BETA\i201120811\Project\Systema\bin\Systema.dll
+D:\ROYECTO BETA\i201120811\Project\Systema\bin\Systema.pdb
+D:\ROYECTO BETA\i201120811\Project\Systema\bin\BL.dll
+D:\ROYECTO BETA\i201120811\Project\Systema\bin\Entity.dll
+D:\ROYECTO BETA\i201120811\Project\Systema\bin\Datos.dll
+D:\ROYECTO BETA\i201120811\Project\Systema\bin\BL.pdb
+D:\ROYECTO BETA\i201120811\Project\Systema\bin\Entity.pdb
+D:\ROYECTO BETA\i201120811\Project\Systema\bin\Datos.pdb
+D:\ROYECTO BETA\i201120811\Project\Systema\obj\Release\Systema.csprojResolveAssemblyReference.cache
+D:\ROYECTO BETA\i201120811\Project\Systema\obj\Release\Systema.dll
+D:\ROYECTO BETA\i201120811\Project\Systema\obj\Release\Systema.pdb
+<<<<<<< HEAD
+D:\ProyectoBeta2015\i201120811\Project\Systema\bin\Systema.dll.config
+D:\ProyectoBeta2015\i201120811\Project\Systema\bin\Systema.dll
+D:\ProyectoBeta2015\i201120811\Project\Systema\bin\Systema.pdb
+D:\ProyectoBeta2015\i201120811\Project\Systema\bin\BL.dll
+D:\ProyectoBeta2015\i201120811\Project\Systema\bin\Entity.dll
+D:\ProyectoBeta2015\i201120811\Project\Systema\bin\Datos.dll
+D:\ProyectoBeta2015\i201120811\Project\Systema\bin\BL.pdb
+D:\ProyectoBeta2015\i201120811\Project\Systema\bin\Entity.pdb
+D:\ProyectoBeta2015\i201120811\Project\Systema\bin\Datos.pdb
+D:\ProyectoBeta2015\i201120811\Project\Systema\obj\Release\Systema.csprojResolveAssemblyReference.cache
+D:\ProyectoBeta2015\i201120811\Project\Systema\obj\Release\Systema.dll
+D:\ProyectoBeta2015\i201120811\Project\Systema\obj\Release\Systema.pdb
+=======
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\bin\Systema.dll.config
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\bin\Systema.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\bin\Systema.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\bin\BL.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\bin\Entity.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\bin\Datos.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\bin\BL.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\bin\Entity.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\bin\Datos.pdb
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\obj\Release\Systema.csprojResolveAssemblyReference.cache
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\obj\Release\Systema.dll
+D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Systema\obj\Release\Systema.pdb
+>>>>>>> origin/master

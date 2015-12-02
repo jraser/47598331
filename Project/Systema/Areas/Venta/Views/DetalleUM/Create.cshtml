@@ -1,0 +1,64 @@
+﻿
+
+<div class="modal-header">
+    <h3 class="modal-title">DETALLE UNIDAD MEDIDA</h3>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <label class="col-md-3 control-label">Producto</label>
+
+            <div class="col-md-6">
+                <div class="input-icon right">
+                    <select ng-model="New.ID_Socio" class="form-control"
+                            data-ng-options="a.ID_Socio as a.Nombres_Socio for a in SocioList" ng-required="true"></select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label class="col-md-3 control-label">Unidad Alternativa</label>
+            <div class="col-md-9">
+                <div class="input-group">            
+                    <input type="number" min="0" name="valor1" id="valor1"  ng-model="New.Precios" ng-required="true" onkeypress="return soloNumeros(event)">
+                    </div>             
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-3 control-label">Observación</label>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <input type="text"  name="valor1" id="valor1" ng-model="New.Precios" ng-required="true">
+                </div>
+
+            </div>
+        </div>
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()" ng-disabled="!New.Precios || !New.ID_Socio">Aceptar</button>
+    <button class="btn btn-warning" ng-click="cancel()">cancelar</button>
+</div>
+
+
+
+
+<script type="text/javascript">
+    // Solo permite ingresar numeros.
+    function soloNumeros(e) {
+        var key = window.Event ? e.which : e.keyCode
+        return ((key >= 48 && key <= 57) || (key == 46))
+    }
+</script>
+
+
+
+
+
+
+
+
