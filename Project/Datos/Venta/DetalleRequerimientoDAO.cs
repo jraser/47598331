@@ -70,8 +70,13 @@ namespace Datos.Venta
                     Lote_Requermientos = obj.Lote_Requermientos,
                     ID_Producto=obj.ID_Producto,
                     CantidadRequisito= obj.CantidadRequisito,
-                    CantidadxMe=obj.CantidadxMe
-
+                    CantidadxMe=obj.CantidadxMe,
+                    ID_Almacen = obj.ID_Almacen,
+                    Codigo_Producto=obj.Codigo_Producto,
+                    Descripcion_Producto=obj.Descripcion_Producto,
+                    ID_Sucursal=obj.ID_Sucursal,
+                    Fecha_venci=obj.Fecha_venci,
+                    
 
                 }).ToList<DetalleRequerimientoView>();
 

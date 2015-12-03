@@ -75,12 +75,16 @@ namespace Entity.Venta
         public DateTime? FechaEliminacion { get; set; }
         public string Estado { get; set; }
         public string Descripcion_Producto { get; set; }
-
-
+        public string Codigo_Producto { get; set; }
+         public DateTime? Fecha_venci { get; set; }
+         public int? Cantidad { get; set; }
 
     }
 
     public class DetalleRequerimientoView : DetalleRequerimiento
-    { }
+    { 
+    
+    
+    }
 }
 

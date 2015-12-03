@@ -266,7 +266,7 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr ng-repeat="item in ProductoList" id="LList">
+                                                            <tr ng-repeat="item in DetalleRequerimientoList" id="LList">
                                                                 <td>{{item.Codigo_Producto}}</td>
                                                                 <td>{{item.Descripcion_Producto}}</td>
                                                                 <td>{{item.Fecha_venci}}</td>
@@ -274,7 +274,21 @@
                                                                 <td>{{item.Lot}}</td>
                                                                 <td>{{item.ID_Almacen}}</td>
                                                                 <td>{{item.ID_Sucursal}}</td>
-                                                                <td><input type="text" class="form-control" ng-model="item.CantidadRequisito" id="Requisito"></td>
+                                                                <td><input type="text" class="form-control" ng-model="item.CantidadRequisito" id="Requisito" disabled></td>
+
+                                                                <td>
+                                                                    <a href="#" class="btn btn-default btn-sm" ng-click="editDetalle(item.ID_DetalleOrden,item.Codigo_Producto,item.Descripcion_Producto,item.PrecioUnitario,item.Cantidad,item.Monto,New.ID_Socio)">
+                                                                        <i class="fa fa-pencil"></i> Modificar
+                                                                    </a>
+
+                                                                </td>
+
+                                                                <td>
+                                                                    <a href="#" class="btn btn-default btn-sm" ng-click="deleteDetalle(item.ID_DetalleOrden)">
+                                                                        <i class="fa fa-pencil"></i> Eliminar
+                                                                    </a>
+
+                                                                </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -294,7 +308,7 @@
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-md-offset-3 col-md-9">
-                                            <button type="button" class="btn blue-dark" ng-click="SaveNew()" ng-disabled="!New.Numero_Req || !New.Motivo || !New.FechaEmision || !New.ID_Sucursal ||!New.ID_Almacen || !New.FechaEntrega ">Grabar</button>
+                                            <button type="button" class="btn blue-dark" ng-click="SaveNew2()">Grabar</button>
                                             <button type="button" class="btn default" ng-click="Cancel()">Cancelar</button>
                                         </div>
                                     </div>

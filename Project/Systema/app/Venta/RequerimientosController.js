@@ -252,6 +252,21 @@
 
     //-------------------------------------GRABACION DEL REQUERIMIENTO------------------------------------------
 
+    $scope.SaveNew2 = function () {
+        $http({
+            method: 'POST',
+            url: 'api/RequerimientosWS',
+            data: $scope.New,
+        }).success(function (response) {
+            $scope.New.ID_Requerimientos = response;
+            alert("Registro Modificado");
+            $scope.Cancel();
+
+        });
+
+    }
+
+
     $scope.SaveNew = function () {
         $http({
             method: 'POST',

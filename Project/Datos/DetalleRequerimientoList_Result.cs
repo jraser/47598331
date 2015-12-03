@@ -19,7 +19,11 @@ namespace Datos
         public string Lote_Requermientos { get; set; }
         public string Codigo_Producto { get; set; }
         public string Descripcion_Producto { get; set; }
+        public Nullable<System.DateTime> Fecha_venci { get; set; }
+        public string Cod_Lote { get; set; }
         public Nullable<int> CantidadRequisito { get; set; }
         public Nullable<int> CantidadxMe { get; set; }
+        public Nullable<int> ID_Almacen { get; set; }
+        public Nullable<int> ID_Sucursal { get; set; }
     }
 }

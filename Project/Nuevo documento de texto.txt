@@ -1,0 +1,38 @@
+USE [SIEPERU2]
+GO
+/****** Object:  StoredProcedure [dbo].[DetalleRequerimientoList]    Script Date: 03/12/2015 0:54:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[DetalleRequerimientoList]
+(
+ @ID_Requerimientos INT
+)
+AS
+BEGIN
+ SELECT 
+Tbl_DetalleRequerimiento.ID_RequerimientoDetalle,
+Tbl_DetalleRequerimiento.ID_Requerimientos,
+Tbl_DetalleRequerimiento.ID_Producto,
+Tbl_DetalleRequerimiento.Lote_Requermientos,
+Tbl_Producto.Codigo_Producto,
+Tbl_Producto.Descripcion_Producto,
+Tbl_Producto.Fecha_venci,
+Tbl_Producto.Cod_Lote,
+Tbl_DetalleRequerimiento.CantidadRequisito,
+Tbl_DetalleRequerimiento.CantidadxMe,
+Tbl_DetalleRequerimiento.ID_Almacen,
+Tbl_DetalleRequerimiento.ID_Sucursal
+
+  
+  from Tbl_DetalleRequerimiento, Tbl_Producto, Tbl_UnidadMedida
+  where Tbl_DetalleRequerimiento.ID_Producto = Tbl_Producto.ID_Producto
+
+  and Tbl_Producto.Codigo_UMedida = Tbl_UnidadMedida.Codigo_UMedida
+  and Tbl_DetalleRequerimiento.ID_Requerimientos = @ID_Requerimientos
+  AND Tbl_DetalleRequerimiento.Estado = 'A'
+  END
+
+
