@@ -31,5 +31,10 @@ namespace BL.Venta
         {
             return Dao.UMGet(ID_UnidadMedida);
         }
+
+        public List<UM> UnidadMedidaUMList(string Codigo_UMedida, int Ayuda)
+        {
+            return Dao.UnidadMedidaUMList(Codigo_UMedida, Ayuda);
+        }
     }
 }

@@ -289,6 +289,7 @@
     <Content Include="app\Venta\SubCategoriaAddController.js" />
     <Content Include="app\Venta\SubCategoriaController.js" />
     <Content Include="app\Venta\SucursalController.js" />
+    <Content Include="app\Venta\UMAddController.js" />
     <Content Include="app\Venta\UnidadController.js" />
     <Content Include="bin\Antlr3.Runtime.dll" />
     <Content Include="bin\Antlr3.Runtime.pdb" />
@@ -4088,6 +4089,7 @@
     <Content Include="Areas\Venta\Views\Unidad\Create.cshtml" />
     <Content Include="Areas\Venta\Views\Unidad\List.cshtml" />
     <Content Include="Areas\Venta\Views\Unidad\ListAdd.cshtml" />
+    <Content Include="Areas\Venta\Views\DetalleOC\UM.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

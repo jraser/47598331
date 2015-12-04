@@ -445,6 +445,19 @@
                  }
              }
          })
+
+             .state('DetalleOCUM', {
+                 url: '/DetalleOCUM',
+                 views: {
+                     "containerOne": {
+                         templateUrl: "DetalleOC/UM",
+                         controller: UMAddController
+                     }
+                 }
+             })
+
+
+    
              .state('OCAddListAdd', {
                  url: '/OCAddListAdd',
                  views: {
@@ -650,4 +663,8 @@ MetronicApp.controller('DetalleRequerimientosController', DetalleRequerimientosC
 MetronicApp.controller('GrupoProductosController', GrupoProductosController);
 MetronicApp.controller('AddProductosGrupoController', AddProductosGrupoController);
 MetronicApp.controller('UnidadController', UnidadController);
+<<<<<<< HEAD
 
+=======
+MetronicApp.controller('UMAddController', UMAddController);
+>>>>>>> origin/master

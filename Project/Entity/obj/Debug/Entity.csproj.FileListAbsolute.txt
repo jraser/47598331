@@ -105,3 +105,11 @@ D:\GGWP\47598331\Project\Entity\bin\Debug\EntityFramework.xml
 D:\GGWP\47598331\Project\Entity\bin\Debug\EntityFramework.SqlServer.xml
 D:\GGWP\47598331\Project\Entity\obj\Debug\Entity.dll
 D:\GGWP\47598331\Project\Entity\obj\Debug\Entity.pdb
+D:\Jraser\47598331\Project\Entity\bin\Debug\Entity.dll
+D:\Jraser\47598331\Project\Entity\bin\Debug\Entity.pdb
+D:\Jraser\47598331\Project\Entity\bin\Debug\EntityFramework.dll
+D:\Jraser\47598331\Project\Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\Jraser\47598331\Project\Entity\bin\Debug\EntityFramework.xml
+D:\Jraser\47598331\Project\Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\Jraser\47598331\Project\Entity\obj\Debug\Entity.dll
+D:\Jraser\47598331\Project\Entity\obj\Debug\Entity.pdb

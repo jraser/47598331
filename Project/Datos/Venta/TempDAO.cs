@@ -17,7 +17,10 @@ namespace Datos.Venta
                  obj.ID_Socio,
                  obj.ID_Producto,
                  obj.Precios,
-                 1
+                 1,
+                 0,
+                 0,
+                 0
                  );
 
             return "";
@@ -44,7 +47,12 @@ namespace Datos.Venta
                     ID_Precio = obj.ID_Precio,
                     Precios = obj.Precio,                  
                     IdTemp = obj.IdTemp,
-                    Cantidad = obj.Cantidad
+                    Cantidad = obj.Cantidad,
+                    ID_UnidadMedida = obj.ID_UnidadMedida,
+                    CB = obj.CB,
+                    CP = obj.CP,
+                    UnidadPresentacion = obj.UnidadPresentacion
+
                 }).ToList<TempView>();
 
             return list;
@@ -58,10 +66,25 @@ namespace Datos.Venta
             return "";
         }
 
+<<<<<<< HEAD
         //public string TempUpdate(int IdTemp, decimal Precio, int Cantidad)
         //{
         //    var context = new SIEPERU2Entities();
         //    context.TempUpdate(IdTemp, Precio, Cantidad);
+=======
+        public string TempUpdate(int IdTemp, decimal Precio, int Cantidad, int ID_UnidadMedida, decimal CB, decimal CP)
+        {
+            var context = new SIEPERU2Entities();
+            context.TempUpdate(IdTemp, Precio, Cantidad, ID_UnidadMedida, CB, CP);
+
+            return "";
+        }
+
+        public string TempUpdateUM(int IdTemp, int ID_UnidadMedida, decimal CB, decimal CP)
+        {
+            var context = new SIEPERU2Entities();
+            context.TempUpdateUM(IdTemp, ID_UnidadMedida, CB, CP);
+>>>>>>> origin/master
 
         //    return "";
         //}

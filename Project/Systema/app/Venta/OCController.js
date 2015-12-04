@@ -37,7 +37,7 @@
         Descripcion_Producto: '',
         PrecioUnitario: 0,
         ID_TempDetalle: 0,
-
+        Observacion: '',
 
     }
 
@@ -248,7 +248,7 @@
                 for (var i = 0; i < $scope.TempList.length; i++) {
                     var item = $scope.TempList[i];
                     item.ID_Orden = Id;
-
+                    item.ID_Almacen = $scope.New.ID_Almacen;
                     $http({
                         method: 'POST',
                         url: 'api/DetalleOrdenCompraWS',
@@ -341,14 +341,19 @@
 
     }
 
-    $scope.actualizarCant = function (Id,prec,canti) {
+
+
+    $scope.actualizarCant = function (Id,prec,canti,id_uni,cbi,cpi) {
         $http({
             method: 'Delete',
             url: 'api/TempWS',
             params: {
                 IdTemp: Id,
                 Precio: prec,
-                Cantidad: canti
+                Cantidad: canti,
+                ID_UnidadMedida: id_uni, 
+                CB: cbi,
+                CP: cpi
             }
         }).success(function (response) {
             $scope.TemporalList();
@@ -446,6 +451,29 @@
 
     }
 
+
+    $scope.modificarUP = function (umd, Id) {
+        var modalInstance = $modal.open({
+            templateUrl: '/DetalleOC/UM',
+            controller: 'UMAddController',
+            resolve: {
+                Codigo_UMedida: function () {
+                    return umd;
+                },
+                IdTemp: function () {
+                    return Id;
+                },
+                scope: function () {
+                    return $scope;
+                }
+
+            }
+        });
+
+    }
+
+
+
     $scope.addSocio = function () {
 
         var modalInstance = $modal.open({
@@ -534,6 +562,10 @@
     function cargartemp(lista) {
         $scope.TempList = lista;
         $.each($scope.TempList, function (index, value) {
+            value.ID_UnidadMedida = value.ID_UnidadMedida;
+            value.CB = value.CB;
+            value.CP = value.CP;
+            value.UnidadPresentacion = value.UnidadPresentacion;
             value.IGV = "19%"
             value.PrecioUnitario = value.Precios;
             value.Cant = value.Cantidad;
@@ -542,7 +574,39 @@
         });
 
         $scope.Calcular();
+       // $scope.UM2();
     }
+
+
+    $scope.UM2 = function () {
+
+        //$scope.New.Monto = 0
+        //$scope.New.Impuesto = 0;
+        $.each($scope.TempList, function (index, value) {
+
+
+            $http({
+                method: 'GET',
+                url: 'api/UMWS',
+                params: {
+                    Codigo_UMedida: value.Codigo_UMedida,
+                    Ayuda: "0",
+                }
+            }).success(function (response) {
+                $scope.UMList = response;
+            });
+
+            //value.Monto = (NumberDecimal(value.PrecioUnitario) * NumberInt(value.Cant));
+
+            //$scope.New.Monto += value.Monto
+            //$scope.New.Impuesto = (NumberInt($scope.New.IGV) / 100) * $scope.New.Monto;
+            //$scope.New.Total = $scope.New.Monto + $scope.New.Impuesto - $scope.New.Descuento;
+
+        });
+
+
+    }
+
 
     $scope.addDescuento = function (Id) {
         var modalInstance = $modal.open({

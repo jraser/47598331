@@ -16,5 +16,9 @@ namespace Systema.Areas.Venta.Controllers
         {
             return View();
         }
+        public ActionResult UM()
+        {
+            return View();
+        }
     }
 }

@@ -31,9 +31,10 @@ namespace Entity.Venta
         public DateTime? FechaEliminacion { get; set; }
         public string Estado { get; set; }
         public string Situacion { get; set; }
+        public string Observacion { get; set; }
         public int ID_Sucursal_Destino { get; set; }
         public List<DetalleOrdenCompraView> Lista { get; set; }
-
+        
     }
 
     public class OrdenCompraView
@@ -76,7 +77,11 @@ namespace Entity.Venta
         public string Descripcion_Producto { get; set; }
         public string Estado { get; set; }
         public string Nombre { get; set; }
-
+        public int? ID_UnidadMedida { get; set; }
+        public decimal? CB { get; set; }
+        public decimal? CP { get; set; }
+        public string UnidadPresentacion { get; set; }
+        
 
 
     }

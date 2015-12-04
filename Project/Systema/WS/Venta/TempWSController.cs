@@ -29,10 +29,16 @@ namespace Systema.WS.Venta
             return bl.TempDelete(IdTemp);
         }
 
-        public string Delete(int IdTemp, decimal Precio, int Cantidad)
+        public string Delete(int IdTemp, decimal Precio, int Cantidad, int ID_UnidadMedida, decimal CB, decimal CP)
         {
             TempBL bl = new TempBL();
-            return bl.TempUpdate(IdTemp, Precio, Cantidad);
+            return bl.TempUpdate(IdTemp, Precio, Cantidad, ID_UnidadMedida, CB, CP);
+        }
+
+        public string Delete(int IdTemp, int ID_UnidadMedida, decimal CB, decimal CP)
+        {
+            TempBL bl = new TempBL();
+            return bl.TempUpdateUM(IdTemp, ID_UnidadMedida, CB, CP);
         }
     }
 }

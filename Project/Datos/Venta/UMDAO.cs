@@ -67,7 +67,20 @@ namespace Datos.Venta
             return list;
         }
 
+        public List<UM> UnidadMedidaUMList(string Codigo_UMedida, int Ayuda)
+        {
+            var context = new SIEPERU2Entities();
 
+            var list = context.UnidadMedidaUMList(Codigo_UMedida).ToList().
+                Select(obj => new UM
+                {
+                    ID_UnidadMedida = obj.ID_UnidadMedida,
+                    UnidadPresentacion = obj.UnidadPresentacion,
+                    CantidaBase = obj.CantidaBase,
+                    Cantidad = obj.Cantidad
+                }).ToList<UM>();
+            return list;
+        }
 
     }
 }

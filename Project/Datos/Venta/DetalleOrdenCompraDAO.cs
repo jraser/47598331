@@ -9,6 +9,7 @@ namespace Datos.Venta
 {
     public class DetalleOrdenCompraDAO
     {
+<<<<<<< HEAD
         //public string DetalleOrdenCompraCreate(DetalleOrdenCompra obj)
         //{
         //    var context = new SIEPERU2Entities();
@@ -33,6 +34,35 @@ namespace Datos.Venta
 
         //    return "";
         //}
+=======
+        public string DetalleOrdenCompraCreate(DetalleOrdenCompra obj)
+        {
+            var context = new SIEPERU2Entities();
+            var Id = context.DetalleOrdenCompraCreate(
+                 obj.ID_DetalleOrden,
+                 obj.ID_Orden,
+                 obj.PrecioUnitario,
+                 obj.Cantidad, 
+                 obj.Monto,
+                 0,
+                 obj.Cantidad,
+                 obj.ID_Producto,
+                 obj.ID_Almacen,
+                 obj.ID_UnidadMedida,
+                 obj.CB,
+                 obj.CP,
+                 obj.UsuarioCreacion,
+                 obj.UsuarioModificacion,
+                 obj.UsuarioEliminacion,
+                 null,
+                 null,
+                 null,
+                 obj.Estado
+                 );
+
+            return "";
+        }
+>>>>>>> origin/master
 
         public DetalleOrdenCompra DetalleOrdenCompraGet(int ID_DetalleOrden, int ID_Orden)
         {
@@ -100,7 +130,12 @@ namespace Datos.Venta
                     Nombre = obj.Nombre,
                     Monto = obj.Monto,
                     Atendido=obj.Atendido,
-                    Faltante = obj.Faltante
+                    Faltante = obj.Faltante,
+                    ID_UnidadMedida = obj.ID_UnidadMedida,
+                    CB = obj.CB,
+                    CP = obj.CP,
+                    UnidadPresentacion = obj.UnidadPresentacion
+
 
                 }).ToList<DetalleOrdenCompraView>();
 

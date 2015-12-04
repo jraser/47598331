@@ -28,6 +28,7 @@ namespace Datos.Venta
                  obj.ID_FormaPago,
                  obj.ID_CondicionPago,
                  obj.ID_Sucursal,
+                 obj.Observacion,
                  null,
                  null,
                  null,
@@ -63,6 +64,7 @@ namespace Datos.Venta
                     ID_Sucursal = obj.ID_Sucursal,
                     ID_Almacen = obj.ID_Almacen,
                     ID_Sucursal_Destino = obj.ID_Sucursal_Destino,
+                    Observacion = obj.Observacion,
                     Estado = obj.Estado,
                 }).ToList<OrdenCompra>()[0];
 
