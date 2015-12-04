@@ -1,14 +1,17 @@
-﻿var DetalleRequerimientosController = function ($rootScope, $scope, $modalInstance, $http, ID_Orden, ID_DetalleOrden, Codigo_Producto, Descripcion_Producto, PrecioUnitario, Cantidad, Descuento, Monto, ID_Socio, scope) {
+﻿var DetalleRequerimientosController = function ($rootScope, $scope, $modalInstance, $http, ID_Requerimientos, ID_RequerimientoDetalle, Codigo_Producto, Descripcion_Producto, CantidadRequisito, Fecha_venci, ID_Sucursal, ID_Almacen, scope) {
 
     $scope.New = {
         ID_RequerimientoDetalle: ID_RequerimientoDetalle,
         ID_Requerimientos: ID_Requerimientos,
-        Lot: Lote_Requermientos,
-        ID_Producto: 0,
-        CantidadRequisito: CantidadRequisito,
-        CantidadxMe: CantidadxMe,
+        Codigo_Producto: Codigo_Producto,
+        Descripcion_Producto: Descripcion_Producto,
+        Fecha_venci: Fecha_venci,
         ID_Almacen: ID_Almacen,
         ID_Sucursal: ID_Sucursal,
+        CantidadRequisito: CantidadRequisito,
+        ID_Producto: '',
+        
+        
     }
 
     $scope.PList = function () {
@@ -30,21 +33,20 @@
         });
     }
 
-    $scope.ok = function () {
+    //$scope.ok = function () {
 
-        $http({
-            method: 'POST',
-            url: 'api/DetalleRequerimientosWS',
-            data: $scope.New,
-        }).success(function (response) {
+    //    $http({
+    //        method: 'POST',
+    //        url: 'api/DetalleRequerimientosWS',
+    //        data: $scope.New,
+    //    }).success(function (response) {
+    //        $scope.New.ID_Requerimientos = response;
+    //        //getProducto($scope.New.ID_Producto);
+    //        alert("Registro Correcto");
+    //        //$state.go('ProductoList');
+    //    });
 
-            $scope.New.ID_Requerimientos = response;
-            //getProducto($scope.New.ID_Producto);
-            alert("Registro Correcto");
-            //$state.go('ProductoList');
-        });
-
-    }
+    //}
 
 
 
@@ -74,39 +76,8 @@
 
     }
 
-    //if (ID_DetalleOrden != 0) {
-    //    $http({
-    //        method: 'Get',
-    //        url: 'api/DetalleOrdenCompraWS',
-    //        params: {
-    //            ID_DetalleOrden: ID_DetalleOrden,
-    //            ID_Orden: ID_Orden,
-    //        }
-    //    }).success(function (responsse) {
-    //        $scope.New = responsse;
-    //    });
-
-    //}
-
-    $scope.Calcular = function () {
-
-        $scope.New.Monto = $scope.New.PrecioUnitario * $scope.New.Cantidad ;
-        $scope.New.Total = $scope.New.Monto - ($scope.New.Monto * ($scope.New.Descuento / 100));
-
-
-
-
-    }
-
-    $scope.Calcular2 = function () {
-
-        $scope.New.Monto = $scope.New.PrecioUnitario * $scope.New.Cantidad;
-        $scope.New.Total = $scope.New.Monto - ($scope.New.Monto * ($scope.New.Descuento / 100));
-
-
-
-    }
+  
     $scope.PList();
 }
 
-DetalleRequerimientosController.$inject = ['$rootScope', '$scope', '$modalInstance', '$http', 'ID_Orden', 'ID_DetalleOrden', 'Codigo_Producto', 'Descripcion_Producto', 'PrecioUnitario', 'Cantidad', 'Descuento', 'Monto', 'ID_Socio', 'scope'];
+DetalleRequerimientosController.$inject = ['$rootScope', '$scope', '$modalInstance', '$http', 'ID_Requerimientos', 'ID_RequerimientoDetalle', 'Codigo_Producto', 'Descripcion_Producto', 'CantidadRequisito','Fecha_venci','ID_Sucursal', 'ID_Almacen','scope'];

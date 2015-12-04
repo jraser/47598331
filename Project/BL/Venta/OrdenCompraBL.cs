@@ -35,10 +35,10 @@ namespace BL.Venta
         public OrdenCompra OrdenCompraGet(int ID_Orden)
         {
             return Dao.OrdenCompraGet(ID_Orden);
-            //var obj = Dao.OrdenCompraGet(ID_Orden);
+            var obj = Dao.OrdenCompraGet(ID_Orden);
 
-            ////obj.Lista = BL.DetalleOrdenCompraList(ID_Orden);
-            ////return obj;
+            obj.Lista = BL.DetalleOrdenCompraList(ID_Orden);
+            return obj;
         }
 
 
@@ -46,14 +46,14 @@ namespace BL.Venta
         {
 
             return Dao.OrdenCompraCreate(obj);
-            //var Id = Dao.OrdenCompraCreate(obj);
-            //foreach (var item in obj.Lista)
-            //{
-            //    item.ID_Orden = int.Parse(Id);
-            //    BL.DetalleOrdenCompraCreate(item);
+            var Id = Dao.OrdenCompraCreate(obj);
+            foreach (var item in obj.Lista)
+            {
+                item.ID_Orden = int.Parse(Id);
+                BL.DetalleOrdenCompraCreate(item);
 
-            //}
-            //return Id;
+            }
+            return Id;
 
         }
 

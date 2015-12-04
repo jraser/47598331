@@ -17,6 +17,7 @@ namespace Datos
         public Nullable<System.DateTime> FechaEmision { get; set; }
         public Nullable<System.DateTime> FechaEntrega { get; set; }
         public Nullable<System.DateTime> FechaContabilidad { get; set; }
+        public string Observacion { get; set; }
         public string Nombres_Socio { get; set; }
         public Nullable<decimal> Monto { get; set; }
         public Nullable<decimal> Impuesto { get; set; }

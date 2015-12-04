@@ -16,6 +16,8 @@ namespace Datos
         public int ID_DetalleOrden { get; set; }
         public Nullable<int> ID_Orden { get; set; }
         public Nullable<int> ID_Producto { get; set; }
+        public Nullable<decimal> CB { get; set; }
+        public Nullable<decimal> CP { get; set; }
         public string Codigo_Producto { get; set; }
         public string Descripcion_Producto { get; set; }
         public Nullable<decimal> PrecioUnitario { get; set; }
@@ -24,5 +26,7 @@ namespace Datos
         public Nullable<decimal> Monto { get; set; }
         public Nullable<int> Atendido { get; set; }
         public Nullable<int> Faltante { get; set; }
+        public Nullable<int> ID_UnidadMedida { get; set; }
+        public string UnidadPresentacion { get; set; }
     }
 }

@@ -22,6 +22,9 @@ namespace Datos
         public Nullable<int> Faltante { get; set; }
         public Nullable<int> ID_Producto { get; set; }
         public Nullable<int> ID_Almacen { get; set; }
+        public Nullable<int> ID_UnidadMedida { get; set; }
+        public Nullable<decimal> CB { get; set; }
+        public Nullable<decimal> CP { get; set; }
         public string UsuarioCreacion { get; set; }
         public string UsuarioModificacion { get; set; }
         public string UsuarioEliminacion { get; set; }
@@ -30,5 +33,6 @@ namespace Datos
         public Nullable<System.DateTime> FechaEliminacion { get; set; }
         public string Estado { get; set; }
         public string Descripcion_Producto { get; set; }
+        public string UnidadPresentacion { get; set; }
     }
 }

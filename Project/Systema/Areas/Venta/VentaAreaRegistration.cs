@@ -223,6 +223,12 @@ namespace Systema.Areas.Venta
            url: "DetalleOC/Modific",
            defaults: new { controller = "DetalleOC", action = "Modific" });
 
+
+           context.MapRoute(
+         name: "DetalleRequerimientosModific",
+         url: "DetalleRequerimientos/Modific",
+         defaults: new { controller = "DetalleRequerimientos", action = "Modific" });
+
            context.MapRoute(
           name: "DetalleOCCreate",
           url: "DetalleOC/Create",

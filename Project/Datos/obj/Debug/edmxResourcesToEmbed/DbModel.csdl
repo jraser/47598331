@@ -204,6 +204,9 @@
       <Parameter Name="Faltante" Mode="In" Type="Int32" />
       <Parameter Name="ID_Producto" Mode="In" Type="Int32" />
       <Parameter Name="ID_Almacen" Mode="In" Type="Int32" />
+      <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
+      <Parameter Name="CB" Mode="In" Type="Decimal" />
+      <Parameter Name="CP" Mode="In" Type="Decimal" />
       <Parameter Name="UsuarioCreacion" Mode="In" Type="String" />
       <Parameter Name="UsuarioModificacion" Mode="In" Type="String" />
       <Parameter Name="UsuarioEliminacion" Mode="In" Type="String" />
@@ -252,7 +255,7 @@
     <FunctionImport Name="DetalleOrdenVentaList" ReturnType="Collection(SIEPERU2Model.DetalleOrdenVentaList_Result)">
       <Parameter Name="ID_Orden" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="DetalleRequerimientoCreate">
+    <FunctionImport Name="DetalleRequerimientoCreate" ReturnType="Collection(Int32)">
       <Parameter Name="ID_RequerimientoDetalle" Mode="In" Type="Int32" />
       <Parameter Name="ID_Requerimientos" Mode="In" Type="Int32" />
       <Parameter Name="ID_DetalleOrden" Mode="In" Type="Int32" />
@@ -269,6 +272,9 @@
       <Parameter Name="FechaModificacion" Mode="In" Type="DateTime" />
       <Parameter Name="FechaEliminacion" Mode="In" Type="DateTime" />
       <Parameter Name="Estado" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="DetalleRequerimientoDelete">
+      <Parameter Name="ID_RequerimientoDetalle" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="DetalleRequerimientoGet" ReturnType="Collection(SIEPERU2Model.DetalleRequerimientoGet_Result)">
       <Parameter Name="ID_RequerimientoDetalle" Mode="In" Type="Int32" />
@@ -476,6 +482,7 @@
       <Parameter Name="ID_FormaPago" Mode="In" Type="String" />
       <Parameter Name="ID_CondicionPago" Mode="In" Type="String" />
       <Parameter Name="ID_Sucursal" Mode="In" Type="Int32" />
+      <Parameter Name="Observacion" Mode="In" Type="String" />
       <Parameter Name="UsuarioCreacion" Mode="In" Type="String" />
       <Parameter Name="UsuarioModificacion" Mode="In" Type="String" />
       <Parameter Name="UsuarioEliminacion" Mode="In" Type="String" />
@@ -699,6 +706,36 @@
       <Parameter Name="UsuarioModificacion" Mode="In" Type="String" />
       <Parameter Name="FechaModificacion" Mode="In" Type="DateTime" />
     </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(SIEPERU2Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(SIEPERU2Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
     <FunctionImport Name="StockAdd" ReturnType="Collection(SIEPERU2Model.StockAdd_Result)">
       <Parameter Name="Descripcion_Producto" Mode="In" Type="String" />
     </FunctionImport>
@@ -767,6 +804,9 @@
       <Parameter Name="ID_Producto" Mode="In" Type="Int32" />
       <Parameter Name="Precio" Mode="In" Type="Decimal" />
       <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
+      <Parameter Name="CB" Mode="In" Type="Decimal" />
+      <Parameter Name="CP" Mode="In" Type="Decimal" />
     </FunctionImport>
     <FunctionImport Name="TempDelete">
       <Parameter Name="IdTemp" Mode="In" Type="Int32" />
@@ -781,9 +821,18 @@
       <Parameter Name="IdTemp" Mode="In" Type="Int32" />
       <Parameter Name="Precio" Mode="In" Type="Decimal" />
       <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+      <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
+      <Parameter Name="CB" Mode="In" Type="Decimal" />
+      <Parameter Name="CP" Mode="In" Type="Decimal" />
     </FunctionImport>
     <FunctionImport Name="TempUpdateOrdenc">
       <Parameter Name="DescripcionTab" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="TempUpdateUM">
+      <Parameter Name="IdTemp" Mode="In" Type="Int32" />
+      <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
+      <Parameter Name="CB" Mode="In" Type="Decimal" />
+      <Parameter Name="CP" Mode="In" Type="Decimal" />
     </FunctionImport>
     <FunctionImport Name="UMGet" ReturnType="Collection(SIEPERU2Model.UMGet_Result)">
       <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
@@ -1111,6 +1160,9 @@
     <Property Type="Int32" Name="Faltante" Nullable="true" />
     <Property Type="Int32" Name="ID_Producto" Nullable="true" />
     <Property Type="Int32" Name="ID_Almacen" Nullable="true" />
+    <Property Type="Int32" Name="ID_UnidadMedida" Nullable="true" />
+    <Property Type="Decimal" Name="CB" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CP" Nullable="true" Precision="18" Scale="2" />
     <Property Type="String" Name="UsuarioCreacion" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="UsuarioModificacion" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="UsuarioEliminacion" Nullable="true" MaxLength="20" />
@@ -1119,11 +1171,14 @@
     <Property Type="DateTime" Name="FechaEliminacion" Nullable="true" Precision="23" />
     <Property Type="String" Name="Estado" Nullable="true" MaxLength="1" />
     <Property Type="String" Name="Descripcion_Producto" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
   </ComplexType>
   <ComplexType Name="DetalleOrdenCompraList_Result">
     <Property Type="Int32" Name="ID_DetalleOrden" Nullable="false" />
     <Property Type="Int32" Name="ID_Orden" Nullable="true" />
     <Property Type="Int32" Name="ID_Producto" Nullable="true" />
+    <Property Type="Decimal" Name="CB" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CP" Nullable="true" Precision="18" Scale="2" />
     <Property Type="String" Name="Codigo_Producto" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="Descripcion_Producto" Nullable="true" MaxLength="200" />
     <Property Type="Decimal" Name="PrecioUnitario" Nullable="true" Precision="18" Scale="2" />
@@ -1132,6 +1187,8 @@
     <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="6" />
     <Property Type="Int32" Name="Atendido" Nullable="true" />
     <Property Type="Int32" Name="Faltante" Nullable="true" />
+    <Property Type="Int32" Name="ID_UnidadMedida" Nullable="true" />
+    <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
   </ComplexType>
   <ComplexType Name="DetalleOrdenVentaGet_Result">
     <Property Type="Int32" Name="ID_DetalleOrden" Nullable="false" />
@@ -1517,6 +1574,7 @@
     <Property Type="String" Name="ID_FormaPago" Nullable="true" MaxLength="5" />
     <Property Type="String" Name="ID_CondicionPago" Nullable="true" MaxLength="5" />
     <Property Type="Int32" Name="ID_Sucursal" Nullable="true" />
+    <Property Type="String" Name="Observacion" Nullable="true" MaxLength="500" />
     <Property Type="String" Name="UsuarioCreacion" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="UsuarioModificacion" Nullable="true" MaxLength="20" />
     <Property Type="String" Name="UsuarioEliminacion" Nullable="true" MaxLength="20" />
@@ -1532,6 +1590,7 @@
     <Property Type="DateTime" Name="FechaEmision" Nullable="true" Precision="23" />
     <Property Type="DateTime" Name="FechaEntrega" Nullable="true" Precision="23" />
     <Property Type="DateTime" Name="FechaContabilidad" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Observacion" Nullable="true" MaxLength="500" />
     <Property Type="String" Name="Nombres_Socio" Nullable="true" MaxLength="100" />
     <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
     <Property Type="Decimal" Name="Impuesto" Nullable="true" Precision="18" Scale="2" />
@@ -1561,6 +1620,7 @@
     <Property Type="DateTime" Name="FechaEmision" Nullable="true" Precision="23" />
     <Property Type="DateTime" Name="FechaEntrega" Nullable="true" Precision="23" />
     <Property Type="DateTime" Name="FechaContabilidad" Nullable="true" Precision="23" />
+    <Property Type="String" Name="Observacion" Nullable="true" MaxLength="500" />
     <Property Type="String" Name="Nombres_Socio" Nullable="true" MaxLength="100" />
     <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
     <Property Type="Decimal" Name="Impuesto" Nullable="true" Precision="18" Scale="2" />
@@ -1792,6 +1852,17 @@
     <Property Type="String" Name="DIRECCION" Nullable="true" MaxLength="200" />
     <Property Type="String" Name="Telefono" Nullable="true" MaxLength="20" />
   </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
   <ComplexType Name="StockAdd_Result">
     <Property Type="Int32" Name="Id_Producto" Nullable="false" />
     <Property Type="String" Name="Lote" Nullable="false" MaxLength="50" />
@@ -1869,6 +1940,10 @@
     <Property Type="Decimal" Name="Precio" Nullable="true" Precision="18" Scale="2" />
     <Property Type="Int32" Name="IdTemp" Nullable="false" />
     <Property Type="Int32" Name="Cantidad" Nullable="true" />
+    <Property Type="Int32" Name="ID_UnidadMedida" Nullable="true" />
+    <Property Type="Decimal" Name="CB" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="CP" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
   </ComplexType>
   <ComplexType Name="TempOrdenC_Result">
     <Property Type="Int32" Name="Id_TabGen" Nullable="false" />
@@ -1920,24 +1995,9 @@
   <ComplexType Name="UnidadMedidaUMList_Result">
     <Property Type="String" Name="Codigo_UMedida" Nullable="false" MaxLength="3" />
     <Property Type="String" Name="Nombre" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="UsuarioCreacion" Nullable="true" MaxLength="20" />
-    <Property Type="String" Name="UsuarioModificacion" Nullable="true" MaxLength="20" />
-    <Property Type="String" Name="UsuarioEliminacion" Nullable="true" MaxLength="20" />
-    <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
-    <Property Type="DateTime" Name="FechaModificacion" Nullable="true" Precision="23" />
-    <Property Type="DateTime" Name="FechaEliminacion" Nullable="true" Precision="23" />
-    <Property Type="String" Name="Observacion" Nullable="true" MaxLength="100" />
     <Property Type="Int32" Name="ID_UnidadMedida" Nullable="false" />
-    <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
-    <Property Type="String" Name="UsuarioCreacion1" Nullable="true" MaxLength="20" />
-    <Property Type="String" Name="UsuarioModificacion1" Nullable="true" MaxLength="20" />
-    <Property Type="String" Name="UsuarioEliminacion1" Nullable="true" MaxLength="20" />
-    <Property Type="DateTime" Name="FechaCreacion1" Nullable="true" Precision="23" />
-    <Property Type="DateTime" Name="FechaModificacion1" Nullable="true" Precision="23" />
-    <Property Type="DateTime" Name="FechaEliminacion1" Nullable="true" Precision="23" />
-    <Property Type="String" Name="Observacion1" Nullable="true" MaxLength="100" />
-    <Property Type="String" Name="Codigo_UMedida1" Nullable="false" MaxLength="3" />
     <Property Type="String" Name="Cantidad" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
     <Property Type="String" Name="CantidaBase" Nullable="true" MaxLength="10" />
   </ComplexType>
   <ComplexType Name="UsuarioList_Result">

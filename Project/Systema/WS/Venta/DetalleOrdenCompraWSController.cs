@@ -37,10 +37,10 @@ namespace Systema.WS.Venta
             return bl.DetalleDelete(ID_DetalleOrden);
         }
 
-        //public OrdenCompra Get(int ID_Orden)
-        //{
-        //    OrdenCompraBL bl = new OrdenCompraBL();
-        //    return bl.OrdenCompraGet(ID_Orden);
-        //}
+        public OrdenCompra Get(int ID_Orden)
+        {
+            OrdenCompraBL bl = new OrdenCompraBL();
+            return bl.OrdenCompraGet(ID_Orden);
+        }
     }
 }

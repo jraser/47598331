@@ -29,6 +29,7 @@ namespace Datos
         public string ID_FormaPago { get; set; }
         public string ID_CondicionPago { get; set; }
         public Nullable<int> ID_Sucursal { get; set; }
+        public string Observacion { get; set; }
         public string UsuarioCreacion { get; set; }
         public string UsuarioModificacion { get; set; }
         public string UsuarioEliminacion { get; set; }

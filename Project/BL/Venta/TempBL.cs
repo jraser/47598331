@@ -13,7 +13,7 @@ namespace BL.Venta
         TempDAO  Dao = new TempDAO();
 	//hola mundo
 
-        public string TempCreate(Temp  obj)
+        public string TempCreate(Temp obj)
         {
 
             return Dao.TempCreate(obj);

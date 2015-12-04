@@ -256,6 +256,7 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>Código</th>
+                                                                <th>Código Producto</th>
                                                                 <th>Descripción </th>
                                                                 <th>Fecha Vencimiento</th>
                                                                 <th>Cantidad Actual</th>
@@ -266,7 +267,8 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr ng-repeat="item in DetalleRequerimientoList" id="LList">
+                                                            <tr ng-repeat="item in DetalleRequerimientoList">
+                                                                <td>{{item.ID_RequerimientoDetalle}}</td>
                                                                 <td>{{item.Codigo_Producto}}</td>
                                                                 <td>{{item.Descripcion_Producto}}</td>
                                                                 <td>{{item.Fecha_venci}}</td>
@@ -277,14 +279,14 @@
                                                                 <td><input type="text" class="form-control" ng-model="item.CantidadRequisito" id="Requisito" disabled></td>
 
                                                                 <td>
-                                                                    <a href="#" class="btn btn-default btn-sm" ng-click="editDetalle(item.ID_DetalleOrden,item.Codigo_Producto,item.Descripcion_Producto,item.PrecioUnitario,item.Cantidad,item.Monto,New.ID_Socio)">
+                                                                    <a href="#" class="btn btn-default btn-sm" ng-click="editDetalle(item.ID_RequerimientoDetalle,item.Codigo_Producto,item.Descripcion_Producto,item.Fecha_venci,item.Lot,item.CantidadRequisito,New.ID_Almacen,New.ID_Sucursal)">
                                                                         <i class="fa fa-pencil"></i> Modificar
                                                                     </a>
 
                                                                 </td>
 
                                                                 <td>
-                                                                    <a href="#" class="btn btn-default btn-sm" ng-click="deleteDetalle(item.ID_DetalleOrden)">
+                                                                    <a href="#" class="btn btn-default btn-sm" ng-click="deleteDetalle(item.ID_RequerimientoDetalle)">
                                                                         <i class="fa fa-pencil"></i> Eliminar
                                                                     </a>
 

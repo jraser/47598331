@@ -34,14 +34,14 @@
     }
 
 
-    //$scope.New2 = {
-    //    ID_Requerimientos: 0,
-    //    CantidadRequisito: '',
-    //    ID_Producto: '',
-    //    Lot: "",
-    //    ID_Almacen: '',
-    //    ID_Sucursal:'',
-    //}
+    $scope.New2 = {
+        ID_Requerimientos: 0,
+        CantidadRequisito: '',
+        ID_Producto: '',
+        Lot: "",
+        ID_Almacen: '',
+        ID_Sucursal:'',
+    }
 
 
     $scope.Edit = function () {
@@ -412,66 +412,64 @@
     $scope.Delete = function () {
     }
 
+    $scope.deleteDetalle = function (Id) {
+        $http({
+            method: 'Delete',
+            url: 'api/DetalleRequerimientosWS',
+            params: {
+                ID_RequerimientoDetalle: Id,
+            }
+        }).success(function (response) {
+            $scope.ListarDetalle();
+            alert("Registro Eliminado");
+        });
+
+    }
 
 
+    $scope.editDetalle = function (Id, CodProducto, DespProducto, fec, Lot, canReq, Almacen, Sucursal) {
+        var modalInstance = $modal.open({
+            templateUrl: '/DetalleRequerimientos/Modific',
+            controller: 'DetalleRequerimientosController',
+            resolve: {
+                ID_Requerimientos: function () {
+                    return $scope.New.ID_Requerimientos;
+                },
+                ID_RequerimientoDetalle: function () {
+                    return Id;
+                },
+                Codigo_Producto: function () {
+                    return CodProducto;
+                },
+                Descripcion_Producto: function () {
+                    return DespProducto;
+                },
+                Fecha_venci: function () {
+                    return fec;
+                },
+                Lot: function () {
+                    return Lot;
+                },
+                CantidadRequisito: function () {
+                    return canReq;
+                },
+                ID_Almacen: function () {
+                    return Almacen;
+                },
 
-    //$scope.getalmacen = function (item) {
-    //    $scope.New.ID_Almacen = item.ID_Almacen;
-    //}
+                ID_Sucursal: function () {
+                    return Sucursal;
+                },
+                
+                scope: function () {
+                    return $scope;
+                }
 
-    //$scope.getOrdenVenta = function (item) {
-    //    $scope.New.ID_Orden = item.ID_Orden;
-    //    $scope.ListarDetalle();
+            }
+        });
 
-    //}
+    }
 
-    //$scope.ListarDetalle = function () {
-
-    //    $http({
-    //        method: 'GET',
-    //        url: 'api/DetalleOrdenVentaWS',
-    //        params: {
-    //            ID_Orden: $scope.New.ID_Orden,
-    //        }
-    //    }).success(function (response) {
-    //        $scope.DetalleOrdenVentaList = response;
-    //        var lista = [];
-    //        $.each($scope.DetalleOrdenVentaList, function (index, value) {
-    //                lista.push(value);
-
-    //        });
-    //        ffff(lista);
-
-    //    });
-    //}
-
-    //function ffff(lista) {
-    //    $scope.getdetalle(lista);
-    //}
-
-
-
-    //$scope.getdetalle = function (lista) {
-    //    $scope.DetalleOrdenVentaList = lista;
-    //    $.each($scope.DetalleOrdenVentaList, function (index, value) {
-    //        value.CantidadRequisito = 0;
-    //        value.Faltante = value.Cantidad - value.Atendido - value.CantidadRequisito;
-    //    });
-
-    //    $scope.Calcular();
-    //}
-
-    //$scope.Calcular = function () {
-    //    $scope.New.Faltante = 0
-
-    //    //$scope.New.Impuesto = 0;
-    //    $.each($scope.DetalleOrdenVentaList, function (index, value) {
-
-    //        value.Faltante = value.Cantidad - value.Atendido - value.CantidadRequisito;
-
-    //    });
-
-    //}
 
     //function Loadddl() {
     //    $http({

@@ -100,6 +100,8 @@
   <Function Name="DescuentoGrupoCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Descuento" Type="int" Mode="In" />
     <Parameter Name="ID_Grupo" Type="int" Mode="In" />
+    <Parameter Name="DescuentoPor" Type="decimal" Mode="In" />
+    <Parameter Name="Descripcion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioCreacion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioModificacion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioEliminacion" Type="varchar" Mode="In" />
@@ -107,6 +109,13 @@
     <Parameter Name="FechaModificacion" Type="datetime" Mode="In" />
     <Parameter Name="FechaEliminacion" Type="datetime" Mode="In" />
     <Parameter Name="Estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DescuentoGrupoList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Grupo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DescuentoGrupoUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Descuento" Type="int" Mode="In" />
+    <Parameter Name="ID_Grupo" Type="int" Mode="In" />
   </Function>
   <Function Name="DescuentoProductoCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Descuento" Type="int" Mode="In" />
@@ -133,6 +142,29 @@
   </Function>
   <Function Name="DescuentoProductoLists" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DetalleGrupoProductoAddList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Descripcion_Producto" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Marca" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Categoria" Type="varchar" Mode="In" />
+    <Parameter Name="ID_SubCategoria" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DetalleGrupoProductosList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Grupo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DetalleGrupoSNCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_DetalleGrupo" Type="int" Mode="In" />
+    <Parameter Name="ID_Grupo" Type="int" Mode="In" />
+    <Parameter Name="ID_Asociado" Type="int" Mode="In" />
+    <Parameter Name="UsuarioCreacion" Type="varchar" Mode="In" />
+    <Parameter Name="FechaCreacion" Type="datetime" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="DetalleGrupoSNDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_DetalleGrupo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DetalleGrupoSNList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Grupo" Type="int" Mode="In" />
   </Function>
   <Function Name="DetalleMovimientoCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_MovimientoDetalle" Type="int" Mode="In" />
@@ -225,6 +257,8 @@
     <Parameter Name="ID_DetalleOrden" Type="int" Mode="In" />
     <Parameter Name="Lote_Requermientos" Type="char" Mode="In" />
     <Parameter Name="ID_Producto" Type="int" Mode="In" />
+    <Parameter Name="ID_Sucursal" Type="int" Mode="In" />
+    <Parameter Name="ID_Almacen" Type="int" Mode="In" />
     <Parameter Name="CantidadRequisito" Type="int" Mode="In" />
     <Parameter Name="CantidadxMe" Type="int" Mode="In" />
     <Parameter Name="UsuarioCreacion" Type="varchar" Mode="In" />
@@ -247,8 +281,6 @@
     <Parameter Name="Faltante" Type="int" Mode="In" />
     <Parameter Name="ID_DetalleOrden" Type="int" Mode="In" />
   </Function>
-<<<<<<< HEAD
-=======
   <Function Name="DevolucionesCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Devolucion" Type="int" Mode="In" />
     <Parameter Name="Cod_devolucion" Type="varchar" Mode="In" />
@@ -263,7 +295,6 @@
     <Parameter Name="Obeservacion" Type="varchar" Mode="In" />
     <Parameter Name="Estado" Type="varchar" Mode="In" />
   </Function>
->>>>>>> origin/master
   <Function Name="DireccionCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Direccion" Type="int" Mode="In" />
     <Parameter Name="Direccion" Type="varchar" Mode="In" />
@@ -299,13 +330,12 @@
     <Parameter Name="Estado" Type="varchar" Mode="In" />
     <Parameter Name="Tipo" Type="varchar" Mode="In" />
   </Function>
-  <Function Name="dll_AlmacenList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="ID_Sucursal" Type="int" Mode="In" />
-  </Function>
+  <Function Name="dll_AlmacenList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="dll_CategoriaList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="dll_ConceptoList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="CodigoTabla" Type="varchar" Mode="In" />
   </Function>
+  <Function Name="dll_EmpresaList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="dll_GrupoList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="dll_MarcaList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="dll_SocioNegocioList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -336,7 +366,9 @@
   <Function Name="EmpresaGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Empresa" Type="int" Mode="In" />
   </Function>
-  <Function Name="EmpresaList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="EmpresaList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RazonSocial" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="GGrupoMod" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Grupo" Type="int" Mode="In" />
@@ -344,6 +376,7 @@
   <Function Name="GrupoCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Grupo" Type="int" Mode="In" />
     <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="TipoGrupo" Type="char" Mode="In" />
     <Parameter Name="UsuarioCreacion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioModificacion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioEliminacion" Type="varchar" Mode="In" />
@@ -363,7 +396,15 @@
   </Function>
   <Function Name="GrupoList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Nombre" Type="varchar" Mode="In" />
-    <Parameter Name="TipoEstado" Type="varchar" Mode="In" />
+    <Parameter Name="TipoGrupo" Type="char" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GrupoSNGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Grupo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GrupoSNList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="TipoGrupo" Type="char" Mode="In" />
   </Function>
   <Function Name="MarcaCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Marca" Type="int" Mode="In" />
@@ -427,6 +468,7 @@
     <Parameter Name="Impuesto" Type="decimal" Mode="In" />
     <Parameter Name="Total" Type="decimal" Mode="In" />
     <Parameter Name="Descuento" Type="decimal" Mode="In" />
+    <Parameter Name="ID_Almacen" Type="int" Mode="In" />
     <Parameter Name="FechaEmision" Type="datetime" Mode="In" />
     <Parameter Name="FechaEntrega" Type="datetime" Mode="In" />
     <Parameter Name="FechaContabilidad" Type="datetime" Mode="In" />
@@ -511,12 +553,7 @@
   <Function Name="PrecioCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Precio" Type="int" Mode="In" />
     <Parameter Name="ID_Producto" Type="int" Mode="In" />
-<<<<<<< HEAD
-    <Parameter Name="PV" Type="numeric" Mode="In" />
-    <Parameter Name="PC" Type="numeric" Mode="In" />
-=======
     <Parameter Name="Precios" Type="numeric" Mode="In" />
->>>>>>> origin/master
     <Parameter Name="ID_Socio" Type="int" Mode="In" />
     <Parameter Name="UsuarioCreacion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioModificacion" Type="varchar" Mode="In" />
@@ -571,17 +608,23 @@
     <Parameter Name="ID_Categoria" Type="int" Mode="In" />
     <Parameter Name="ID_SubCategoria" Type="int" Mode="In" />
   </Function>
+  <Function Name="ProductoXalmacen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Descripcion_Producto" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Almacen" Type="int" Mode="In" />
+    <Parameter Name="ID_Sucursal" Type="int" Mode="In" />
+  </Function>
   <Function Name="RequerimientoGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Requerimientos" Type="int" Mode="In" />
   </Function>
   <Function Name="RequerimientosCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Requerimientos" Type="int" Mode="In" />
-    <Parameter Name="ID_Orden" Type="int" Mode="In" />
+    <Parameter Name="Numero_Req" Type="int" Mode="In" />
     <Parameter Name="TipoDocumento" Type="char" Mode="In" />
     <Parameter Name="NroDocumento" Type="int" Mode="In" />
     <Parameter Name="FechaEmision" Type="datetime" Mode="In" />
     <Parameter Name="FechaEntrega" Type="datetime" Mode="In" />
     <Parameter Name="FechaContabilidad" Type="datetime" Mode="In" />
+    <Parameter Name="ID_Sucursal" Type="int" Mode="In" />
     <Parameter Name="ID_Almacen" Type="int" Mode="In" />
     <Parameter Name="UsuarioCreacion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioModificacion" Type="varchar" Mode="In" />
@@ -590,11 +633,17 @@
     <Parameter Name="FechaModificacion" Type="datetime" Mode="In" />
     <Parameter Name="FechaEliminacion" Type="datetime" Mode="In" />
     <Parameter Name="Estado" Type="varchar" Mode="In" />
+    <Parameter Name="Motivo" Type="varchar" Mode="In" />
   </Function>
-  <Function Name="RequerimintoList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="Nombres_Socio" Type="varchar" Mode="In" />
+  <Function Name="RequerimientosList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Descripcion_Sucursal" Type="varchar" Mode="In" />
+    <Parameter Name="Descripcion_Almacen" Type="varchar" Mode="In" />
     <Parameter Name="FechaInI" Type="datetime" Mode="In" />
     <Parameter Name="FechaFin" Type="datetime" Mode="In" />
+    <Parameter Name="Estado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="S2ucursalList2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_Empresa" Type="int" Mode="In" />
   </Function>
   <Function Name="SocioNegocio_Paginacion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Socio" Type="int" Mode="In" />
@@ -730,6 +779,7 @@
     <Parameter Name="FechaModificacion" Type="datetime" Mode="In" />
     <Parameter Name="FechaEliminacion" Type="datetime" Mode="In" />
     <Parameter Name="Direccion" Type="varchar" Mode="In" />
+    <Parameter Name="ID_Empresa" Type="int" Mode="In" />
   </Function>
   <Function Name="SucursalDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="ID_Sucursal" Type="int" Mode="In" />
@@ -745,6 +795,7 @@
     <Parameter Name="ID_TempDetalle" Type="int" Mode="In" />
     <Parameter Name="ID_Socio" Type="int" Mode="In" />
     <Parameter Name="ID_Producto" Type="int" Mode="In" />
+    <Parameter Name="Precio" Type="decimal" Mode="In" />
     <Parameter Name="Cantidad" Type="int" Mode="In" />
   </Function>
   <Function Name="TempDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -758,20 +809,32 @@
   </Function>
   <Function Name="TempUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="IdTemp" Type="int" Mode="In" />
+    <Parameter Name="Precio" Type="decimal" Mode="In" />
     <Parameter Name="Cantidad" Type="int" Mode="In" />
   </Function>
   <Function Name="TempUpdateOrdenc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="DescripcionTab" Type="varchar" Mode="In" />
   </Function>
-  <Function Name="UnidadMedidaCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="Codigo_UMedida" Type="varchar" Mode="In" />
+  <Function Name="UMGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_UnidadMedida" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UMList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="UnidadPresentacion" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UnidadMedidaCreate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ID_UnidadMedida" Type="int" Mode="In" />
+    <Parameter Name="UnidadPresentacion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioCreacion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioModificacion" Type="varchar" Mode="In" />
     <Parameter Name="UsuarioEliminacion" Type="varchar" Mode="In" />
     <Parameter Name="FechaCreacion" Type="datetime" Mode="In" />
     <Parameter Name="FechaModificacion" Type="datetime" Mode="In" />
     <Parameter Name="FechaEliminacion" Type="datetime" Mode="In" />
+    <Parameter Name="Observacion" Type="varchar" Mode="In" />
+    <Parameter Name="Codigo_UMedida" Type="varchar" Mode="In" />
+    <Parameter Name="Cantidad" Type="varchar" Mode="In" />
+    <Parameter Name="CantidaBase" Type="varchar" Mode="In" />
   </Function>
   <Function Name="UnidadMedidaGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Codigo_UMedida" Type="varchar" Mode="In" />
@@ -779,6 +842,9 @@
   <Function Name="UnidadMedidaList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Codigo_UMedida" Type="varchar" Mode="In" />
     <Parameter Name="Nombre" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UnidadMedidaUMList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Codigo_UMedida" Type="char" Mode="In" />
   </Function>
   <Function Name="UnidadMedidaUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Codigo_UMedida" Type="varchar" Mode="In" />

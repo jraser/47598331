@@ -424,6 +424,18 @@
                  }
              })
 
+
+
+        .state('DetalleRequerimientosModific', {
+            url: '/DetalleRequerimientosModific',
+            views: {
+                "containerOne": {
+                    templateUrl: "DetalleRequerimientos/Modific",
+                    controller: DetalleRequerimientosController
+                }
+            }
+        })
+
          .state('DetalleOCCreate', {
              url: '/DetalleOCCreate',
              views: {
@@ -638,3 +650,4 @@ MetronicApp.controller('DetalleRequerimientosController', DetalleRequerimientosC
 MetronicApp.controller('GrupoProductosController', GrupoProductosController);
 MetronicApp.controller('AddProductosGrupoController', AddProductosGrupoController);
 MetronicApp.controller('UnidadController', UnidadController);
+

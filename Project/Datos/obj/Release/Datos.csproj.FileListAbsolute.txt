@@ -97,3 +97,15 @@ D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Datos\obj\Release\Datos.cs
 D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Datos\obj\Release\Datos.dll
 D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\Datos\obj\Release\Datos.pdb
 >>>>>>> origin/master
+D:\GGWP\47598331\Project\Datos\bin\Release\Datos.dll.config
+D:\GGWP\47598331\Project\Datos\bin\Release\Datos.dll
+D:\GGWP\47598331\Project\Datos\bin\Release\Datos.pdb
+D:\GGWP\47598331\Project\Datos\bin\Release\Entity.dll
+D:\GGWP\47598331\Project\Datos\bin\Release\EntityFramework.dll
+D:\GGWP\47598331\Project\Datos\bin\Release\EntityFramework.SqlServer.dll
+D:\GGWP\47598331\Project\Datos\bin\Release\Entity.pdb
+D:\GGWP\47598331\Project\Datos\bin\Release\EntityFramework.xml
+D:\GGWP\47598331\Project\Datos\bin\Release\EntityFramework.SqlServer.xml
+D:\GGWP\47598331\Project\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+D:\GGWP\47598331\Project\Datos\obj\Release\Datos.dll
+D:\GGWP\47598331\Project\Datos\obj\Release\Datos.pdb

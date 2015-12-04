@@ -28,5 +28,9 @@ namespace Datos
         public Nullable<decimal> Precio { get; set; }
         public int IdTemp { get; set; }
         public Nullable<int> Cantidad { get; set; }
+        public Nullable<int> ID_UnidadMedida { get; set; }
+        public Nullable<decimal> CB { get; set; }
+        public Nullable<decimal> CP { get; set; }
+        public string UnidadPresentacion { get; set; }
     }
 }

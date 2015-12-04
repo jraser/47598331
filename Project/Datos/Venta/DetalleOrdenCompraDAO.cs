@@ -9,30 +9,30 @@ namespace Datos.Venta
 {
     public class DetalleOrdenCompraDAO
     {
-        public string DetalleOrdenCompraCreate(DetalleOrdenCompra obj)
-        {
-            var context = new SIEPERU2Entities();
-            var Id = context.DetalleOrdenCompraCreate(
-                 obj.ID_DetalleOrden,
-                 obj.ID_Orden,
-                 obj.PrecioUnitario,
-                 obj.Cantidad, 
-                 obj.Monto,
-                 0,
-                 obj.Cantidad,
-                 obj.ID_Producto,
-                 obj.ID_Almacen,
-                 obj.UsuarioCreacion,
-                 obj.UsuarioModificacion,
-                 obj.UsuarioEliminacion,
-                 null,
-                 null,
-                 null,
-                 obj.Estado
-                 );
+        //public string DetalleOrdenCompraCreate(DetalleOrdenCompra obj)
+        //{
+        //    var context = new SIEPERU2Entities();
+        //    var Id = context.DetalleOrdenCompraCreate(
+        //         obj.ID_DetalleOrden,
+        //         obj.ID_Orden,
+        //         obj.PrecioUnitario,
+        //         obj.Cantidad, 
+        //         obj.Monto,
+        //         0,
+        //         obj.Cantidad,
+        //         obj.ID_Producto,
+        //         obj.ID_Almacen,
+        //         obj.UsuarioCreacion,
+        //         obj.UsuarioModificacion,
+        //         obj.UsuarioEliminacion,
+        //         null,
+        //         null,
+        //         null,
+        //         obj.Estado
+        //         );
 
-            return "";
-        }
+        //    return "";
+        //}
 
         public DetalleOrdenCompra DetalleOrdenCompraGet(int ID_DetalleOrden, int ID_Orden)
         {

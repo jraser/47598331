@@ -37,7 +37,6 @@
             url: 'api/DetalleOrdenCompraWS',
             data: $scope.New,
         }).success(function (response) {
-
             $scope.New.ID_Orden = response;
             //getProducto($scope.New.ID_Producto);
             alert("Registro Correcto");

@@ -58,13 +58,14 @@ namespace Datos.Venta
             return "";
         }
 
-        public string TempUpdate(int IdTemp, decimal Precio, int Cantidad)
-        {
-            var context = new SIEPERU2Entities();
-            context.TempUpdate(IdTemp, Precio, Cantidad);
+        //public string TempUpdate(int IdTemp, decimal Precio, int Cantidad)
+        //{
+        //    var context = new SIEPERU2Entities();
+        //    context.TempUpdate(IdTemp, Precio, Cantidad);
 
-            return "";
-        }
+        //    return "";
+        //}
+        
         
 
     }

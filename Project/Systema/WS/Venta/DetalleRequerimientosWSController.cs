@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+
 namespace Systema.WS.Venta
 {
   public class DetalleRequerimientosWSController :ApiController
@@ -30,6 +31,12 @@ namespace Systema.WS.Venta
             return bl.DetalleRequerimientoList(ID_Requerimientos);
         }
 
+
+        //public string Delete(int ID_RequerimientoDetalle)
+        //{
+        //    DetalleRequerimientoBL bl = new DetalleRequerimientoBL();
+        //    return bl.DetalleRequerimientoDelete(ID_RequerimientoDetalle);
+        //}
 
     }
 }

@@ -208,6 +208,9 @@
           <Parameter Name="Faltante" Type="int" Mode="In" />
           <Parameter Name="ID_Producto" Type="int" Mode="In" />
           <Parameter Name="ID_Almacen" Type="int" Mode="In" />
+          <Parameter Name="ID_UnidadMedida" Type="int" Mode="In" />
+          <Parameter Name="CB" Type="decimal" Mode="In" />
+          <Parameter Name="CP" Type="decimal" Mode="In" />
           <Parameter Name="UsuarioCreacion" Type="varchar" Mode="In" />
           <Parameter Name="UsuarioModificacion" Type="varchar" Mode="In" />
           <Parameter Name="UsuarioEliminacion" Type="varchar" Mode="In" />
@@ -273,6 +276,9 @@
           <Parameter Name="FechaModificacion" Type="datetime" Mode="In" />
           <Parameter Name="FechaEliminacion" Type="datetime" Mode="In" />
           <Parameter Name="Estado" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DetalleRequerimientoDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_RequerimientoDetalle" Type="int" Mode="In" />
         </Function>
         <Function Name="DetalleRequerimientoGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID_RequerimientoDetalle" Type="int" Mode="In" />
@@ -374,6 +380,7 @@
         <Function Name="EmpresaList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="RazonSocial" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="GGrupoMod" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID_Grupo" Type="int" Mode="In" />
         </Function>
@@ -480,6 +487,7 @@
           <Parameter Name="ID_FormaPago" Type="varchar" Mode="In" />
           <Parameter Name="ID_CondicionPago" Type="varchar" Mode="In" />
           <Parameter Name="ID_Sucursal" Type="int" Mode="In" />
+          <Parameter Name="Observacion" Type="varchar" Mode="In" />
           <Parameter Name="UsuarioCreacion" Type="varchar" Mode="In" />
           <Parameter Name="UsuarioModificacion" Type="varchar" Mode="In" />
           <Parameter Name="UsuarioEliminacion" Type="varchar" Mode="In" />
@@ -703,6 +711,36 @@
           <Parameter Name="UsuarioModificacion" Type="varchar" Mode="In" />
           <Parameter Name="FechaModificacion" Type="datetime" Mode="In" />
         </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="StockAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Descripcion_Producto" Type="varchar" Mode="In" />
         </Function>
@@ -771,6 +809,9 @@
           <Parameter Name="ID_Producto" Type="int" Mode="In" />
           <Parameter Name="Precio" Type="decimal" Mode="In" />
           <Parameter Name="Cantidad" Type="int" Mode="In" />
+          <Parameter Name="ID_UnidadMedida" Type="int" Mode="In" />
+          <Parameter Name="CB" Type="decimal" Mode="In" />
+          <Parameter Name="CP" Type="decimal" Mode="In" />
         </Function>
         <Function Name="TempDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="IdTemp" Type="int" Mode="In" />
@@ -785,9 +826,18 @@
           <Parameter Name="IdTemp" Type="int" Mode="In" />
           <Parameter Name="Precio" Type="decimal" Mode="In" />
           <Parameter Name="Cantidad" Type="int" Mode="In" />
+          <Parameter Name="ID_UnidadMedida" Type="int" Mode="In" />
+          <Parameter Name="CB" Type="decimal" Mode="In" />
+          <Parameter Name="CP" Type="decimal" Mode="In" />
         </Function>
         <Function Name="TempUpdateOrdenc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DescripcionTab" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TempUpdateUM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IdTemp" Type="int" Mode="In" />
+          <Parameter Name="ID_UnidadMedida" Type="int" Mode="In" />
+          <Parameter Name="CB" Type="decimal" Mode="In" />
+          <Parameter Name="CP" Type="decimal" Mode="In" />
         </Function>
         <Function Name="UMGet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID_UnidadMedida" Type="int" Mode="In" />
@@ -1066,6 +1116,9 @@
             <Parameter Name="Faltante" Mode="In" Type="Int32" />
             <Parameter Name="ID_Producto" Mode="In" Type="Int32" />
             <Parameter Name="ID_Almacen" Mode="In" Type="Int32" />
+            <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
+            <Parameter Name="CB" Mode="In" Type="Decimal" />
+            <Parameter Name="CP" Mode="In" Type="Decimal" />
             <Parameter Name="UsuarioCreacion" Mode="In" Type="String" />
             <Parameter Name="UsuarioModificacion" Mode="In" Type="String" />
             <Parameter Name="UsuarioEliminacion" Mode="In" Type="String" />
@@ -1114,7 +1167,7 @@
           <FunctionImport Name="DetalleOrdenVentaList" ReturnType="Collection(SIEPERU2Model.DetalleOrdenVentaList_Result)">
             <Parameter Name="ID_Orden" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="DetalleRequerimientoCreate">
+          <FunctionImport Name="DetalleRequerimientoCreate" ReturnType="Collection(Int32)">
             <Parameter Name="ID_RequerimientoDetalle" Mode="In" Type="Int32" />
             <Parameter Name="ID_Requerimientos" Mode="In" Type="Int32" />
             <Parameter Name="ID_DetalleOrden" Mode="In" Type="Int32" />
@@ -1131,6 +1184,9 @@
             <Parameter Name="FechaModificacion" Mode="In" Type="DateTime" />
             <Parameter Name="FechaEliminacion" Mode="In" Type="DateTime" />
             <Parameter Name="Estado" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DetalleRequerimientoDelete">
+            <Parameter Name="ID_RequerimientoDetalle" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="DetalleRequerimientoGet" ReturnType="Collection(SIEPERU2Model.DetalleRequerimientoGet_Result)">
             <Parameter Name="ID_RequerimientoDetalle" Mode="In" Type="Int32" />
@@ -1338,6 +1394,7 @@
             <Parameter Name="ID_FormaPago" Mode="In" Type="String" />
             <Parameter Name="ID_CondicionPago" Mode="In" Type="String" />
             <Parameter Name="ID_Sucursal" Mode="In" Type="Int32" />
+            <Parameter Name="Observacion" Mode="In" Type="String" />
             <Parameter Name="UsuarioCreacion" Mode="In" Type="String" />
             <Parameter Name="UsuarioModificacion" Mode="In" Type="String" />
             <Parameter Name="UsuarioEliminacion" Mode="In" Type="String" />
@@ -1561,6 +1618,36 @@
             <Parameter Name="UsuarioModificacion" Mode="In" Type="String" />
             <Parameter Name="FechaModificacion" Mode="In" Type="DateTime" />
           </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(SIEPERU2Model.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(SIEPERU2Model.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
           <FunctionImport Name="StockAdd" ReturnType="Collection(SIEPERU2Model.StockAdd_Result)">
             <Parameter Name="Descripcion_Producto" Mode="In" Type="String" />
           </FunctionImport>
@@ -1629,6 +1716,9 @@
             <Parameter Name="ID_Producto" Mode="In" Type="Int32" />
             <Parameter Name="Precio" Mode="In" Type="Decimal" />
             <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+            <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
+            <Parameter Name="CB" Mode="In" Type="Decimal" />
+            <Parameter Name="CP" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="TempDelete">
             <Parameter Name="IdTemp" Mode="In" Type="Int32" />
@@ -1643,9 +1733,18 @@
             <Parameter Name="IdTemp" Mode="In" Type="Int32" />
             <Parameter Name="Precio" Mode="In" Type="Decimal" />
             <Parameter Name="Cantidad" Mode="In" Type="Int32" />
+            <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
+            <Parameter Name="CB" Mode="In" Type="Decimal" />
+            <Parameter Name="CP" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="TempUpdateOrdenc">
             <Parameter Name="DescripcionTab" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="TempUpdateUM">
+            <Parameter Name="IdTemp" Mode="In" Type="Int32" />
+            <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
+            <Parameter Name="CB" Mode="In" Type="Decimal" />
+            <Parameter Name="CP" Mode="In" Type="Decimal" />
           </FunctionImport>
           <FunctionImport Name="UMGet" ReturnType="Collection(SIEPERU2Model.UMGet_Result)">
             <Parameter Name="ID_UnidadMedida" Mode="In" Type="Int32" />
@@ -1973,6 +2072,9 @@
           <Property Type="Int32" Name="Faltante" Nullable="true" />
           <Property Type="Int32" Name="ID_Producto" Nullable="true" />
           <Property Type="Int32" Name="ID_Almacen" Nullable="true" />
+          <Property Type="Int32" Name="ID_UnidadMedida" Nullable="true" />
+          <Property Type="Decimal" Name="CB" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="CP" Nullable="true" Precision="18" Scale="2" />
           <Property Type="String" Name="UsuarioCreacion" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="UsuarioModificacion" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="UsuarioEliminacion" Nullable="true" MaxLength="20" />
@@ -1981,11 +2083,14 @@
           <Property Type="DateTime" Name="FechaEliminacion" Nullable="true" Precision="23" />
           <Property Type="String" Name="Estado" Nullable="true" MaxLength="1" />
           <Property Type="String" Name="Descripcion_Producto" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="DetalleOrdenCompraList_Result">
           <Property Type="Int32" Name="ID_DetalleOrden" Nullable="false" />
           <Property Type="Int32" Name="ID_Orden" Nullable="true" />
           <Property Type="Int32" Name="ID_Producto" Nullable="true" />
+          <Property Type="Decimal" Name="CB" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="CP" Nullable="true" Precision="18" Scale="2" />
           <Property Type="String" Name="Codigo_Producto" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="Descripcion_Producto" Nullable="true" MaxLength="200" />
           <Property Type="Decimal" Name="PrecioUnitario" Nullable="true" Precision="18" Scale="2" />
@@ -1994,6 +2099,8 @@
           <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="6" />
           <Property Type="Int32" Name="Atendido" Nullable="true" />
           <Property Type="Int32" Name="Faltante" Nullable="true" />
+          <Property Type="Int32" Name="ID_UnidadMedida" Nullable="true" />
+          <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="DetalleOrdenVentaGet_Result">
           <Property Type="Int32" Name="ID_DetalleOrden" Nullable="false" />
@@ -2379,6 +2486,7 @@
           <Property Type="String" Name="ID_FormaPago" Nullable="true" MaxLength="5" />
           <Property Type="String" Name="ID_CondicionPago" Nullable="true" MaxLength="5" />
           <Property Type="Int32" Name="ID_Sucursal" Nullable="true" />
+          <Property Type="String" Name="Observacion" Nullable="true" MaxLength="500" />
           <Property Type="String" Name="UsuarioCreacion" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="UsuarioModificacion" Nullable="true" MaxLength="20" />
           <Property Type="String" Name="UsuarioEliminacion" Nullable="true" MaxLength="20" />
@@ -2394,6 +2502,7 @@
           <Property Type="DateTime" Name="FechaEmision" Nullable="true" Precision="23" />
           <Property Type="DateTime" Name="FechaEntrega" Nullable="true" Precision="23" />
           <Property Type="DateTime" Name="FechaContabilidad" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Observacion" Nullable="true" MaxLength="500" />
           <Property Type="String" Name="Nombres_Socio" Nullable="true" MaxLength="100" />
           <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="Impuesto" Nullable="true" Precision="18" Scale="2" />
@@ -2423,6 +2532,7 @@
           <Property Type="DateTime" Name="FechaEmision" Nullable="true" Precision="23" />
           <Property Type="DateTime" Name="FechaEntrega" Nullable="true" Precision="23" />
           <Property Type="DateTime" Name="FechaContabilidad" Nullable="true" Precision="23" />
+          <Property Type="String" Name="Observacion" Nullable="true" MaxLength="500" />
           <Property Type="String" Name="Nombres_Socio" Nullable="true" MaxLength="100" />
           <Property Type="Decimal" Name="Monto" Nullable="true" Precision="18" Scale="2" />
           <Property Type="Decimal" Name="Impuesto" Nullable="true" Precision="18" Scale="2" />
@@ -2654,6 +2764,17 @@
           <Property Type="String" Name="DIRECCION" Nullable="true" MaxLength="200" />
           <Property Type="String" Name="Telefono" Nullable="true" MaxLength="20" />
         </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
         <ComplexType Name="StockAdd_Result">
           <Property Type="Int32" Name="Id_Producto" Nullable="false" />
           <Property Type="String" Name="Lote" Nullable="false" MaxLength="50" />
@@ -2731,6 +2852,10 @@
           <Property Type="Decimal" Name="Precio" Nullable="true" Precision="18" Scale="2" />
           <Property Type="Int32" Name="IdTemp" Nullable="false" />
           <Property Type="Int32" Name="Cantidad" Nullable="true" />
+          <Property Type="Int32" Name="ID_UnidadMedida" Nullable="true" />
+          <Property Type="Decimal" Name="CB" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="CP" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="TempOrdenC_Result">
           <Property Type="Int32" Name="Id_TabGen" Nullable="false" />
@@ -2782,24 +2907,9 @@
         <ComplexType Name="UnidadMedidaUMList_Result">
           <Property Type="String" Name="Codigo_UMedida" Nullable="false" MaxLength="3" />
           <Property Type="String" Name="Nombre" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="UsuarioCreacion" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="UsuarioModificacion" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="UsuarioEliminacion" Nullable="true" MaxLength="20" />
-          <Property Type="DateTime" Name="FechaCreacion" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="FechaModificacion" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="FechaEliminacion" Nullable="true" Precision="23" />
-          <Property Type="String" Name="Observacion" Nullable="true" MaxLength="100" />
           <Property Type="Int32" Name="ID_UnidadMedida" Nullable="false" />
-          <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="UsuarioCreacion1" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="UsuarioModificacion1" Nullable="true" MaxLength="20" />
-          <Property Type="String" Name="UsuarioEliminacion1" Nullable="true" MaxLength="20" />
-          <Property Type="DateTime" Name="FechaCreacion1" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="FechaModificacion1" Nullable="true" Precision="23" />
-          <Property Type="DateTime" Name="FechaEliminacion1" Nullable="true" Precision="23" />
-          <Property Type="String" Name="Observacion1" Nullable="true" MaxLength="100" />
-          <Property Type="String" Name="Codigo_UMedida1" Nullable="false" MaxLength="3" />
           <Property Type="String" Name="Cantidad" Nullable="false" MaxLength="10" />
+          <Property Type="String" Name="UnidadPresentacion" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="CantidaBase" Nullable="true" MaxLength="10" />
         </ComplexType>
         <ComplexType Name="UsuarioList_Result">
@@ -3193,6 +3303,9 @@
                 <ScalarProperty Name="Faltante" ColumnName="Faltante" />
                 <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
                 <ScalarProperty Name="ID_Almacen" ColumnName="ID_Almacen" />
+                <ScalarProperty Name="ID_UnidadMedida" ColumnName="ID_UnidadMedida" />
+                <ScalarProperty Name="CB" ColumnName="CB" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
                 <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
                 <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
                 <ScalarProperty Name="UsuarioEliminacion" ColumnName="UsuarioEliminacion" />
@@ -3201,6 +3314,7 @@
                 <ScalarProperty Name="FechaEliminacion" ColumnName="FechaEliminacion" />
                 <ScalarProperty Name="Estado" ColumnName="Estado" />
                 <ScalarProperty Name="Descripcion_Producto" ColumnName="Descripcion_Producto" />
+                <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -3210,6 +3324,8 @@
                 <ScalarProperty Name="ID_DetalleOrden" ColumnName="ID_DetalleOrden" />
                 <ScalarProperty Name="ID_Orden" ColumnName="ID_Orden" />
                 <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
+                <ScalarProperty Name="CB" ColumnName="CB" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
                 <ScalarProperty Name="Codigo_Producto" ColumnName="Codigo_Producto" />
                 <ScalarProperty Name="Descripcion_Producto" ColumnName="Descripcion_Producto" />
                 <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
@@ -3218,6 +3334,8 @@
                 <ScalarProperty Name="Monto" ColumnName="Monto" />
                 <ScalarProperty Name="Atendido" ColumnName="Atendido" />
                 <ScalarProperty Name="Faltante" ColumnName="Faltante" />
+                <ScalarProperty Name="ID_UnidadMedida" ColumnName="ID_UnidadMedida" />
+                <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -3268,6 +3386,7 @@
             </ResultMapping>
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="DetalleRequerimientoCreate" FunctionName="SIEPERU2Model.Store.DetalleRequerimientoCreate" />
+          <FunctionImportMapping FunctionImportName="DetalleRequerimientoDelete" FunctionName="SIEPERU2Model.Store.DetalleRequerimientoDelete" />
           <FunctionImportMapping FunctionImportName="DetalleRequerimientoGet" FunctionName="SIEPERU2Model.Store.DetalleRequerimientoGet">
             <ResultMapping>
               <ComplexTypeMapping TypeName="SIEPERU2Model.DetalleRequerimientoGet_Result">
@@ -3730,6 +3849,7 @@
                 <ScalarProperty Name="ID_FormaPago" ColumnName="ID_FormaPago" />
                 <ScalarProperty Name="ID_CondicionPago" ColumnName="ID_CondicionPago" />
                 <ScalarProperty Name="ID_Sucursal" ColumnName="ID_Sucursal" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
                 <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
                 <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
                 <ScalarProperty Name="UsuarioEliminacion" ColumnName="UsuarioEliminacion" />
@@ -3749,6 +3869,7 @@
                 <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
                 <ScalarProperty Name="FechaEntrega" ColumnName="FechaEntrega" />
                 <ScalarProperty Name="FechaContabilidad" ColumnName="FechaContabilidad" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
                 <ScalarProperty Name="Nombres_Socio" ColumnName="Nombres_Socio" />
                 <ScalarProperty Name="Monto" ColumnName="Monto" />
                 <ScalarProperty Name="Impuesto" ColumnName="Impuesto" />
@@ -3787,6 +3908,7 @@
                 <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
                 <ScalarProperty Name="FechaEntrega" ColumnName="FechaEntrega" />
                 <ScalarProperty Name="FechaContabilidad" ColumnName="FechaContabilidad" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
                 <ScalarProperty Name="Nombres_Socio" ColumnName="Nombres_Socio" />
                 <ScalarProperty Name="Monto" ColumnName="Monto" />
                 <ScalarProperty Name="Impuesto" ColumnName="Impuesto" />
@@ -4087,6 +4209,30 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="SocioNegocioListportipo" FunctionName="SIEPERU2Model.Store.SocioNegocioListportipo" />
           <FunctionImportMapping FunctionImportName="SocioNegocioUpdate" FunctionName="SIEPERU2Model.Store.SocioNegocioUpdate" />
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SIEPERU2Model.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SIEPERU2Model.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SIEPERU2Model.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SIEPERU2Model.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIEPERU2Model.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SIEPERU2Model.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SIEPERU2Model.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SIEPERU2Model.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SIEPERU2Model.Store.sp_upgraddiagrams" />
           <FunctionImportMapping FunctionImportName="StockAdd" FunctionName="SIEPERU2Model.Store.StockAdd">
             <ResultMapping>
               <ComplexTypeMapping TypeName="SIEPERU2Model.StockAdd_Result">
@@ -4194,6 +4340,10 @@
                 <ScalarProperty Name="Precio" ColumnName="Precio" />
                 <ScalarProperty Name="IdTemp" ColumnName="IdTemp" />
                 <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="ID_UnidadMedida" ColumnName="ID_UnidadMedida" />
+                <ScalarProperty Name="CB" ColumnName="CB" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -4208,6 +4358,7 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="TempUpdate" FunctionName="SIEPERU2Model.Store.TempUpdate" />
           <FunctionImportMapping FunctionImportName="TempUpdateOrdenc" FunctionName="SIEPERU2Model.Store.TempUpdateOrdenc" />
+          <FunctionImportMapping FunctionImportName="TempUpdateUM" FunctionName="SIEPERU2Model.Store.TempUpdateUM" />
           <FunctionImportMapping FunctionImportName="UMGet" FunctionName="SIEPERU2Model.Store.UMGet">
             <ResultMapping>
               <ComplexTypeMapping TypeName="SIEPERU2Model.UMGet_Result">
@@ -4272,24 +4423,9 @@
               <ComplexTypeMapping TypeName="SIEPERU2Model.UnidadMedidaUMList_Result">
                 <ScalarProperty Name="Codigo_UMedida" ColumnName="Codigo_UMedida" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
-                <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
-                <ScalarProperty Name="UsuarioEliminacion" ColumnName="UsuarioEliminacion" />
-                <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
-                <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
-                <ScalarProperty Name="FechaEliminacion" ColumnName="FechaEliminacion" />
-                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
                 <ScalarProperty Name="ID_UnidadMedida" ColumnName="ID_UnidadMedida" />
-                <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
-                <ScalarProperty Name="UsuarioCreacion1" ColumnName="UsuarioCreacion1" />
-                <ScalarProperty Name="UsuarioModificacion1" ColumnName="UsuarioModificacion1" />
-                <ScalarProperty Name="UsuarioEliminacion1" ColumnName="UsuarioEliminacion1" />
-                <ScalarProperty Name="FechaCreacion1" ColumnName="FechaCreacion1" />
-                <ScalarProperty Name="FechaModificacion1" ColumnName="FechaModificacion1" />
-                <ScalarProperty Name="FechaEliminacion1" ColumnName="FechaEliminacion1" />
-                <ScalarProperty Name="Observacion1" ColumnName="Observacion1" />
-                <ScalarProperty Name="Codigo_UMedida1" ColumnName="Codigo_UMedida1" />
                 <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+                <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
                 <ScalarProperty Name="CantidaBase" ColumnName="CantidaBase" />
               </ComplexTypeMapping>
             </ResultMapping>

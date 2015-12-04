@@ -181,6 +181,9 @@
     <Compile Include="Areas\Venta\Controllers\DescuentoController.cs" />
     <Compile Include="Areas\Venta\Controllers\DetalleOCController.cs" />
     <Compile Include="Areas\Venta\Controllers\DetalleOVController.cs" />
+    <Compile Include="Areas\Venta\Controllers\DetalleRequerimientosController.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Areas\Venta\Controllers\DetalleUMController.cs" />
     <Compile Include="Areas\Venta\Controllers\EmpresaController.cs" />
     <Compile Include="Areas\Venta\Controllers\ListaPrecioController.cs" />
@@ -267,7 +270,6 @@
     <Content Include="app\Venta\DetalleOCController.js" />
     <Content Include="app\Venta\DetalleOVController.js" />
     <Content Include="app\Venta\DetalleRequerimientosController.js" />
-    <Content Include="app\Venta\DetalleRequerimientosController2.js" />
     <Content Include="app\Venta\DetalleUMController.js" />
     <Content Include="app\Venta\EmpresaController.js" />
     <Content Include="app\Venta\ListaPrecioController.js" />

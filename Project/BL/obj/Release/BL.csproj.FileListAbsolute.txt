@@ -89,3 +89,14 @@ D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\obj\Release\BL.csprojRe
 D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\obj\Release\BL.dll
 D:\PROYECTO BETAPHARMA REPOSITORIO\i201120811\Project\BL\obj\Release\BL.pdb
 >>>>>>> origin/master
+D:\GGWP\47598331\Project\BL\bin\Release\BL.dll
+D:\GGWP\47598331\Project\BL\bin\Release\BL.pdb
+D:\GGWP\47598331\Project\BL\bin\Release\Datos.dll
+D:\GGWP\47598331\Project\BL\bin\Release\Entity.dll
+D:\GGWP\47598331\Project\BL\bin\Release\EntityFramework.dll
+D:\GGWP\47598331\Project\BL\bin\Release\Datos.pdb
+D:\GGWP\47598331\Project\BL\bin\Release\Entity.pdb
+D:\GGWP\47598331\Project\BL\bin\Release\EntityFramework.xml
+D:\GGWP\47598331\Project\BL\obj\Release\BL.csprojResolveAssemblyReference.cache
+D:\GGWP\47598331\Project\BL\obj\Release\BL.dll
+D:\GGWP\47598331\Project\BL\obj\Release\BL.pdb
