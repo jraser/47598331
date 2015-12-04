@@ -32,6 +32,12 @@ namespace Entity.Venta
         
         public string Cod_Lote { get; set; }
         public decimal? Precios { get; set; }  
+
+        public string UnidadPresentacion { get; set; }
+        public decimal? CB { get; set; }  
+        public decimal? CP { get; set; }  
+        public int? ID_UnidadMedida { get; set; }
+
     }
 
 

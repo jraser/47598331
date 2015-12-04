@@ -1,10 +1,4 @@
-﻿@using Entity;
-@using Datos;
-@using BL;
-
-@model Entity.Venta.DetalleOrdenCompra
-
-<div>
+﻿<div>
     <div class="tab-pane" id="tab_2">
         <div class="portlet light bg-inverse">
             <div class="portlet box blue-dark ">
@@ -58,6 +52,12 @@
                                         <div class="col-md-9">
                                             <select ng-model="New.ID_Almacen" class="form-control"
                                                     data-ng-options="a.ID_Almacen as a.Descripcion_Almacen for a in AlmacenList"></select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3">Observaciones</label>
+                                        <div class="col-md-9">
+                                            <input type="text" class="form-control" ng-model="New.Observacion">
                                         </div>
                                     </div>
 
@@ -154,9 +154,15 @@
                                                             <thead>
                                                                 <tr>
                                                                     <th>Codigo</th>
-                                                                    <th>Codigo Producto</th>
+                                                                    <th>C. Producto</th>
                                                                     <th>Descripción</th>
-                                                                    <th>Precio</th>
+                                                                    @*<th>Categoria</th>
+                                                                    <th>SubCategoria</th>*@
+                                                                    <th>UnidadBase</th>
+                                                                    <th>UnidadPresentacion</th>
+                                                                    <th>C.Base</th>
+                                                                    <th>C.Presentacion</th>
+                                                                    <th>PrecioProducto</th>
                                                                     <th>Cantidad</th>
                                                                     <th>SubTotal</th>
                                                                 </tr>
@@ -166,6 +172,12 @@
                                                                     <td>{{item.ID_DetalleOrden}} </td>
                                                                     <td>{{item.Codigo_Producto}} </td>
                                                                     <td>{{item.Descripcion_Producto}} </td>
+                                                                    <td>{{item.Unidad}}</td>
+                                                                    <td>{{item.UnidadPresentacion}}</td>
+                                              
+                                                                    <td>{{item.CB}}</td>
+                                                                    <td>{{item.CP}}</td>
+
                                                                     <td><input type="text" class="form-control text-right" ng-model="item.PrecioUnitario" value="{{item.PrecioUnitario |number:6}}" disabled></td>
                                                                     <td><input type="text" class="form-control text-right" ng-model="item.Cantidad" ng-change="Calcular2()" disabled></td>
                                                                     <td><input type="text" class="form-control text-right" ng-model="item.Monto" value="{{item.Monto |number:6}}" disabled></td>

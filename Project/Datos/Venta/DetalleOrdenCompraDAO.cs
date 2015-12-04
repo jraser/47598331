@@ -22,6 +22,9 @@ namespace Datos.Venta
                  obj.Cantidad,
                  obj.ID_Producto,
                  obj.ID_Almacen,
+                 obj.ID_UnidadMedida,
+                 obj.CB,
+                 obj.CP,
                  obj.UsuarioCreacion,
                  obj.UsuarioModificacion,
                  obj.UsuarioEliminacion,
@@ -100,7 +103,12 @@ namespace Datos.Venta
                     Nombre = obj.Nombre,
                     Monto = obj.Monto,
                     Atendido=obj.Atendido,
-                    Faltante = obj.Faltante
+                    Faltante = obj.Faltante,
+                    ID_UnidadMedida = obj.ID_UnidadMedida,
+                    CB = obj.CB,
+                    CP = obj.CP,
+                    UnidadPresentacion = obj.UnidadPresentacion
+
 
                 }).ToList<DetalleOrdenCompraView>();
 

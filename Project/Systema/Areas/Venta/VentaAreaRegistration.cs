@@ -228,6 +228,10 @@ namespace Systema.Areas.Venta
           url: "DetalleOC/Create",
           defaults: new { controller = "DetalleOC", action = "Create" });
 
+           context.MapRoute(
+            name: "DetalleOCUM",
+            url: "DetalleOC/UM",
+            defaults: new { controller = "DetalleOC", action = "UM" });
 
           context.MapRoute(
           name: "OCAddListAdd",

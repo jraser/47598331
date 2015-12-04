@@ -356,6 +356,9 @@
           <ScalarProperty Name="Faltante" ColumnName="Faltante" />
           <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
           <ScalarProperty Name="ID_Almacen" ColumnName="ID_Almacen" />
+          <ScalarProperty Name="ID_UnidadMedida" ColumnName="ID_UnidadMedida" />
+          <ScalarProperty Name="CB" ColumnName="CB" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
           <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
           <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
           <ScalarProperty Name="UsuarioEliminacion" ColumnName="UsuarioEliminacion" />
@@ -364,6 +367,7 @@
           <ScalarProperty Name="FechaEliminacion" ColumnName="FechaEliminacion" />
           <ScalarProperty Name="Estado" ColumnName="Estado" />
           <ScalarProperty Name="Descripcion_Producto" ColumnName="Descripcion_Producto" />
+          <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -373,6 +377,8 @@
           <ScalarProperty Name="ID_DetalleOrden" ColumnName="ID_DetalleOrden" />
           <ScalarProperty Name="ID_Orden" ColumnName="ID_Orden" />
           <ScalarProperty Name="ID_Producto" ColumnName="ID_Producto" />
+          <ScalarProperty Name="CB" ColumnName="CB" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
           <ScalarProperty Name="Codigo_Producto" ColumnName="Codigo_Producto" />
           <ScalarProperty Name="Descripcion_Producto" ColumnName="Descripcion_Producto" />
           <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
@@ -381,6 +387,8 @@
           <ScalarProperty Name="Monto" ColumnName="Monto" />
           <ScalarProperty Name="Atendido" ColumnName="Atendido" />
           <ScalarProperty Name="Faltante" ColumnName="Faltante" />
+          <ScalarProperty Name="ID_UnidadMedida" ColumnName="ID_UnidadMedida" />
+          <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -431,6 +439,7 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="DetalleRequerimientoCreate" FunctionName="SIEPERU2Model.Store.DetalleRequerimientoCreate" />
+    <FunctionImportMapping FunctionImportName="DetalleRequerimientoDelete" FunctionName="SIEPERU2Model.Store.DetalleRequerimientoDelete" />
     <FunctionImportMapping FunctionImportName="DetalleRequerimientoGet" FunctionName="SIEPERU2Model.Store.DetalleRequerimientoGet">
       <ResultMapping>
         <ComplexTypeMapping TypeName="SIEPERU2Model.DetalleRequerimientoGet_Result">
@@ -893,6 +902,7 @@
           <ScalarProperty Name="ID_FormaPago" ColumnName="ID_FormaPago" />
           <ScalarProperty Name="ID_CondicionPago" ColumnName="ID_CondicionPago" />
           <ScalarProperty Name="ID_Sucursal" ColumnName="ID_Sucursal" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
           <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
           <ScalarProperty Name="UsuarioEliminacion" ColumnName="UsuarioEliminacion" />
@@ -912,6 +922,7 @@
           <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
           <ScalarProperty Name="FechaEntrega" ColumnName="FechaEntrega" />
           <ScalarProperty Name="FechaContabilidad" ColumnName="FechaContabilidad" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="Nombres_Socio" ColumnName="Nombres_Socio" />
           <ScalarProperty Name="Monto" ColumnName="Monto" />
           <ScalarProperty Name="Impuesto" ColumnName="Impuesto" />
@@ -950,6 +961,7 @@
           <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
           <ScalarProperty Name="FechaEntrega" ColumnName="FechaEntrega" />
           <ScalarProperty Name="FechaContabilidad" ColumnName="FechaContabilidad" />
+          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="Nombres_Socio" ColumnName="Nombres_Socio" />
           <ScalarProperty Name="Monto" ColumnName="Monto" />
           <ScalarProperty Name="Impuesto" ColumnName="Impuesto" />
@@ -1250,6 +1262,30 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="SocioNegocioListportipo" FunctionName="SIEPERU2Model.Store.SocioNegocioListportipo" />
     <FunctionImportMapping FunctionImportName="SocioNegocioUpdate" FunctionName="SIEPERU2Model.Store.SocioNegocioUpdate" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="SIEPERU2Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="SIEPERU2Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="SIEPERU2Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="SIEPERU2Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIEPERU2Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="SIEPERU2Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SIEPERU2Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="SIEPERU2Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="SIEPERU2Model.Store.sp_upgraddiagrams" />
     <FunctionImportMapping FunctionImportName="StockAdd" FunctionName="SIEPERU2Model.Store.StockAdd">
       <ResultMapping>
         <ComplexTypeMapping TypeName="SIEPERU2Model.StockAdd_Result">
@@ -1357,6 +1393,10 @@
           <ScalarProperty Name="Precio" ColumnName="Precio" />
           <ScalarProperty Name="IdTemp" ColumnName="IdTemp" />
           <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="ID_UnidadMedida" ColumnName="ID_UnidadMedida" />
+          <ScalarProperty Name="CB" ColumnName="CB" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -1371,6 +1411,7 @@
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="TempUpdate" FunctionName="SIEPERU2Model.Store.TempUpdate" />
     <FunctionImportMapping FunctionImportName="TempUpdateOrdenc" FunctionName="SIEPERU2Model.Store.TempUpdateOrdenc" />
+    <FunctionImportMapping FunctionImportName="TempUpdateUM" FunctionName="SIEPERU2Model.Store.TempUpdateUM" />
     <FunctionImportMapping FunctionImportName="UMGet" FunctionName="SIEPERU2Model.Store.UMGet">
       <ResultMapping>
         <ComplexTypeMapping TypeName="SIEPERU2Model.UMGet_Result">
@@ -1435,24 +1476,9 @@
         <ComplexTypeMapping TypeName="SIEPERU2Model.UnidadMedidaUMList_Result">
           <ScalarProperty Name="Codigo_UMedida" ColumnName="Codigo_UMedida" />
           <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="UsuarioCreacion" ColumnName="UsuarioCreacion" />
-          <ScalarProperty Name="UsuarioModificacion" ColumnName="UsuarioModificacion" />
-          <ScalarProperty Name="UsuarioEliminacion" ColumnName="UsuarioEliminacion" />
-          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
-          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
-          <ScalarProperty Name="FechaEliminacion" ColumnName="FechaEliminacion" />
-          <ScalarProperty Name="Observacion" ColumnName="Observacion" />
           <ScalarProperty Name="ID_UnidadMedida" ColumnName="ID_UnidadMedida" />
-          <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
-          <ScalarProperty Name="UsuarioCreacion1" ColumnName="UsuarioCreacion1" />
-          <ScalarProperty Name="UsuarioModificacion1" ColumnName="UsuarioModificacion1" />
-          <ScalarProperty Name="UsuarioEliminacion1" ColumnName="UsuarioEliminacion1" />
-          <ScalarProperty Name="FechaCreacion1" ColumnName="FechaCreacion1" />
-          <ScalarProperty Name="FechaModificacion1" ColumnName="FechaModificacion1" />
-          <ScalarProperty Name="FechaEliminacion1" ColumnName="FechaEliminacion1" />
-          <ScalarProperty Name="Observacion1" ColumnName="Observacion1" />
-          <ScalarProperty Name="Codigo_UMedida1" ColumnName="Codigo_UMedida1" />
           <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="UnidadPresentacion" ColumnName="UnidadPresentacion" />
           <ScalarProperty Name="CantidaBase" ColumnName="CantidaBase" />
         </ComplexTypeMapping>
       </ResultMapping>

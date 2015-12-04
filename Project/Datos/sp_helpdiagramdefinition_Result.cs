@@ -11,14 +11,9 @@ namespace Datos
 {
     using System;
     
-    public partial class StockAdd_Result
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int Id_Producto { get; set; }
-        public string Lote { get; set; }
-        public string Codigo_Producto { get; set; }
-        public string Descripcion_Producto { get; set; }
-        public string categoria { get; set; }
-        public string subcategoria { get; set; }
-        public Nullable<decimal> Precios { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -58,7 +58,7 @@
                                     <div class="form-group">
                                         <label class="control-label col-md-3">Observaciones</label>
                                         <div class="col-md-9">
-                                            <input type="text" class="form-control" ng-model="New.Observaciones">
+                                            <input type="text" class="form-control" ng-model="New.Observacion">
                                         </div>
                                     </div>
                                 </div>
@@ -157,10 +157,10 @@
                                                                     @*<th>Categoria</th>
                                                                     <th>SubCategoria</th>*@
                                                                     <th>UnidadBase</th>
-                                                                    <th>UPresentacion</th>
-                                                                    <th>CB</th>
-                                                                    <th>CP</th>
-                                                                    <th>Precio</th>
+                                                                    <th>UnidadPresentacion</th>
+                                                                    <th>C.Base</th>
+                                                                    <th>C.Presentacion</th>
+                                                                    <th>PrecioProducto</th>
                                                                     <th>Cantidad</th>
                                                                     <th>SubTotal</th>
                                                                 </tr>
@@ -171,15 +171,33 @@
                                                                    <td>{{item.Descripcion_Producto}}</td>
                                                                    @*<td>{{item.Categoria}}</td>
                                                                    <td>{{item.SubCategoria}}</td>*@
-                                                                   <td><input type="text" class="form-control" ng-model="item.Unidad" disabled></td>
+                                                                   <td>{{item.Unidad}}</td>
+                                                                   <td>
+                                                                       <p class="input-group">
+                                                                           <input type="text" class="form-control" ng-model="item.UnidadPresentacion" disabled>
+                                                                           <span class="input-group-btn">
+                                                                               <a href="#" class="btn btn-default btn-sm" ng-click="modificarUP(item.Codigo_UMedida,item.IdTemp)">
+                                                                                   <i class="fa fa-plus"></i>
+                                                                               </a>
+                                                                           </span>
+                                                                       </p>    
+                                                                       
+                                                                       
+                                                                       
+                                                                       @*<input type="text" class="form-control" ng-model="item.UPresentacion"  disabled>
+                                                                       <a href="#" class="btn btn-default btn-sm" ng-click="deleteDetalle2(item.IdTemp)">
+                                                                           <i class="fa fa-pencil"></i>
+                                                                       </a>*@
+                                                                   
+                                                                   </td>
 
-                                                                   <td><select ng-model="item.UPresentacion" class="form-control"
-                                                                               data-ng-options="a.Codigo as a.Descripcion for a in CondicionList"></select></td>
-                                                                   <td></td>
-                                                                   <td></td>
+                                                                   @*<td><select ng-model="item.UPresentacion" class="form-control"
+                                                                                    data-ng-options="a.ID_UnidadMedida as a.UnidadPresentacion for a in UMList"></select></td>*@
+                                                                   <td><input type="text" class="form-control" ng-model="item.CB" ng-change="actualizarCant(item.IdTemp, item.PrecioUnitario, item.Cant, item.ID_UnidadMedida, item.CB, item.CP )"></td>
+                                                                   <td><input type="text" class="form-control" ng-model="item.CP" ng-change="actualizarCant(item.IdTemp, item.PrecioUnitario, item.Cant, item.ID_UnidadMedida, item.CB, item.CP )"></td>
 
-                                                                   <td><input type="text" class="form-control" ng-model="item.PrecioUnitario" value="{{item.PrecioUnitario |number:2}}" ng-change="actualizarCant(item.IdTemp, item.PrecioUnitario, item.Cant)"></td>
-                                                                   <td><input type="text" class="form-control" ng-model="item.Cant" ng-change="actualizarCant(item.IdTemp, item.PrecioUnitario, item.Cant)"></td>
+                                                                   <td><input type="text" class="form-control" ng-model="item.PrecioUnitario" value="{{item.PrecioUnitario |number:2}}" ng-change="actualizarCant(item.IdTemp, item.PrecioUnitario, item.Cant, item.ID_UnidadMedida, item.CB, item.CP )"></td>
+                                                                   <td><input type="text" class="form-control" ng-model="item.Cant" ng-change="actualizarCant(item.IdTemp, item.PrecioUnitario, item.Cant, item.ID_UnidadMedida, item.CB, item.CP )"></td>
                                                                    <td><input type="text" class="form-control text-right" ng-model="item.Monto" value="{{item.Monto |number:2}}" disabled></td>
                                                                    <td>
                                                                        <a href="#" class="btn btn-default btn-sm" ng-click="deleteDetalle2(item.IdTemp)">

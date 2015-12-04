@@ -31,6 +31,13 @@ namespace Systema.WS.Venta
         {
             UMBL bl = new UMBL();
             return bl.UMGet(ID_UnidadMedida);
-        } 
+        }
+
+        public List<UM> Get(string Codigo_UMedida, int Ayuda)
+        {
+            UMBL bl = new UMBL();
+            return bl.UnidadMedidaUMList(Codigo_UMedida, Ayuda);
+
+        }
     }
 }

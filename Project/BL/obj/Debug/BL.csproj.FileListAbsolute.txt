@@ -164,3 +164,14 @@ D:\GGWP\47598331\Project\BL\bin\Debug\EntityFramework.xml
 D:\GGWP\47598331\Project\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
 D:\GGWP\47598331\Project\BL\obj\Debug\BL.dll
 D:\GGWP\47598331\Project\BL\obj\Debug\BL.pdb
+D:\Jraser\47598331\Project\BL\bin\Debug\BL.dll
+D:\Jraser\47598331\Project\BL\bin\Debug\BL.pdb
+D:\Jraser\47598331\Project\BL\bin\Debug\Datos.dll
+D:\Jraser\47598331\Project\BL\bin\Debug\Entity.dll
+D:\Jraser\47598331\Project\BL\bin\Debug\EntityFramework.dll
+D:\Jraser\47598331\Project\BL\bin\Debug\Datos.pdb
+D:\Jraser\47598331\Project\BL\bin\Debug\Entity.pdb
+D:\Jraser\47598331\Project\BL\bin\Debug\EntityFramework.xml
+D:\Jraser\47598331\Project\BL\obj\Debug\BL.csprojResolveAssemblyReference.cache
+D:\Jraser\47598331\Project\BL\obj\Debug\BL.dll
+D:\Jraser\47598331\Project\BL\obj\Debug\BL.pdb

@@ -266,6 +266,12 @@
     <Compile Include="SocioNegocio\GrupoDAO.cs" />
     <Compile Include="SocioNegocio\GrupoDetalleDAO.cs" />
     <Compile Include="SocioNegocio\SocioNegocioDAO.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>DbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="StockAdd_Result.cs">
       <DependentUpon>DbModel.tt</DependentUpon>
     </Compile>

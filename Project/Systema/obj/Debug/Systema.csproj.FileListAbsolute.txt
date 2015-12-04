@@ -466,3 +466,15 @@ D:\GGWP\47598331\Project\Systema\bin\Datos.pdb
 D:\GGWP\47598331\Project\Systema\obj\Debug\Systema.csprojResolveAssemblyReference.cache
 D:\GGWP\47598331\Project\Systema\obj\Debug\Systema.dll
 D:\GGWP\47598331\Project\Systema\obj\Debug\Systema.pdb
+D:\Jraser\47598331\Project\Systema\bin\Systema.dll.config
+D:\Jraser\47598331\Project\Systema\bin\Systema.dll
+D:\Jraser\47598331\Project\Systema\bin\Systema.pdb
+D:\Jraser\47598331\Project\Systema\bin\BL.dll
+D:\Jraser\47598331\Project\Systema\bin\Entity.dll
+D:\Jraser\47598331\Project\Systema\bin\Datos.dll
+D:\Jraser\47598331\Project\Systema\bin\BL.pdb
+D:\Jraser\47598331\Project\Systema\bin\Entity.pdb
+D:\Jraser\47598331\Project\Systema\bin\Datos.pdb
+D:\Jraser\47598331\Project\Systema\obj\Debug\Systema.csprojResolveAssemblyReference.cache
+D:\Jraser\47598331\Project\Systema\obj\Debug\Systema.dll
+D:\Jraser\47598331\Project\Systema\obj\Debug\Systema.pdb

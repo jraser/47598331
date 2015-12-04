@@ -1,0 +1,64 @@
+﻿
+<div class="portlet-body">
+    <div class="table-responsive">
+        <div class="col-md-12 portlet-body  ">
+            <div class="modal-header">
+                <h3 class="modal-title">Agregar Unidad de Presentación</h3>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control text-right" ng-model="New.Codigo_UMedida" disabled style="visibility:hidden">
+                <input type="text" class="form-control text-right" ng-model="New.IdTemp" disabled style="visibility:hidden">
+            </div>
+            <table class="table <!--table-striped--> table-bordered table-advance table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            ID
+                        </th>
+                        <th>
+                            Unidad Presentación
+                        </th>
+                        <th>
+                            Cantidad Base
+                        </th>
+                        <th>
+                            Cantidad 
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in UMList">
+                        <td>{{item.ID_UnidadMedida}}</td>
+                        <td>{{item.UnidadPresentacion}}</td>
+                        <td>{{item.CantidaBase}}</td>
+                        <td>{{item.Cantidad}}</td>
+                        <td align="center">
+                            <input type="radio"
+                                   ng-click="Select(item)"
+                                   ng-checked="item.checked">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+
+
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" ng-click="ok()">Aceptar</button>
+                <button class="btn btn-warning" ng-click="cancel()">Cancelar</button>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+

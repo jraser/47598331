@@ -34,10 +34,17 @@ namespace BL.Venta
             return "";
         }
 
-        public string TempUpdate(int IdTemp, decimal Precio, int Cantidad)
+        public string TempUpdate(int IdTemp, decimal Precio, int Cantidad, int ID_UnidadMedida, decimal CB, decimal CP)
         {
 
-            Dao.TempUpdate(IdTemp, Precio, Cantidad);
+            Dao.TempUpdate(IdTemp, Precio, Cantidad, ID_UnidadMedida, CB, CP);
+            return "";
+        }
+
+        public string TempUpdateUM(int IdTemp, int ID_UnidadMedida, decimal CB, decimal CP)
+        {
+
+            Dao.TempUpdateUM(IdTemp, ID_UnidadMedida, CB, CP);
             return "";
         }
         
